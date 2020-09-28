@@ -33,13 +33,15 @@ public class FPS_Controller : MonoBehaviour
     }
     private void Update()
     {
-        
-        //playerRB.rotation = transform.rotation;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            PlayerManager.playerSpeed = PlayerManager.runSpeed;
+        }
     }
     private void FixedUpdate()
     {
 
-        //transform.LookAt(playerTransform);
+        
 
         //Player Rigidbody movement.
 
@@ -58,26 +60,9 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpAllowed) { { Jump(); } }
 
-        //Rotation
-        //if (moveRight) { { RotateRight(); } }
-        //if (moveLeft) { { RotateLeft(); } }
         
     }
-    //public void RotateRight()
-    //{
-    //    if (Input.GetAxis("Rotate Right") > 0) { xRotation++; }
-    //    else if (Input.GetAxis("Rotate Left") < 0) { xRotation--; }
-    //    playerTransform.Rotate(Vector3.up, xRotation * xRotationSpeed);
-    //    Debug.Log("Rotating Right.");
 
-    //}
-    //public void RotateLeft()
-    //{
-    //    if (Input.GetAxis("Horizontal") < 0) { xRotation++; }
-    //    else if (Input.GetAxis("Horizontal") > 0) { xRotation--; }
-    //    playerTransform.Rotate(-Vector3.up, xRotation * xRotationSpeed);
-    //    Debug.Log("Rotating Left.");
-    //}
 
     public void Jump()
     {

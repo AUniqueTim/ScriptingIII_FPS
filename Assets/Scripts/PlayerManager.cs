@@ -17,11 +17,12 @@ public class PlayerManager : MonoBehaviour
     public float ammo;
 
     [SerializeField] public static float playerSpeed = 20f;
+    [SerializeField] public static float runSpeed = 40f;
     [SerializeField] public static float crouchHeight = 5f;
     [SerializeField] public static float jumpHeight = 15f;
     [SerializeField] public static int fallSpeed = 3;
 
-
+   
 
     public static PlayerManager instance;
     public static PlayerManager Instance
@@ -44,6 +45,7 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+       
     }
     public void Update()
     {
