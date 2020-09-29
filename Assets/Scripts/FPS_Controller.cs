@@ -17,6 +17,10 @@ public class FPS_Controller : MonoBehaviour
     public bool isJumping;
     public bool jumpComplete;
 
+    public float xRotation = 0;
+    public float xRotationSpeed;
+    public float yRotation = 0;
+    public float yRotationSpeed;
     Quaternion originalRotation;
     public Transform playerTransform;
 

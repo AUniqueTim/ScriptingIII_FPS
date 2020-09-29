@@ -8,58 +8,41 @@ public class PlayerDetector : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private GameObject playerGO;
     [SerializeField] private Transform lunchLady;
-    [SerializeField] private Transform wayPoint1;
-    [SerializeField] private Transform wayPoint2;
-
     private Vector3 playerDirection;
-    public float detectionRange;
-    public Vector3 detectionRangeVector;
-    
+    private Vector3 detectionRange;
 
+    public float xDistance;
+    public float yDistance;
+    public float zDistance;
     void Awake()
     {
         playerDirection = player.position - transform.position;
-        
+        detectionRange = playerDirection - new Vector3(xDistance,yDistance,zDistance);
     }
     private void Update()
     {
-        
-        Vector3 direction = Vector3.Normalize(playerDirection);
-        float distance = Vector3.Distance(transform.position, player.position);
+        Vector3 direction = Vector3.Normalize(playerDirection - detectionRange);
+        float distance = Vector3.Distance(transform.position, player.transform.position - detectionRange);
+        Debug.Log(distance);
+
+        Ray ray = new Ray(transform.position, direction);
+
+        Debug.DrawRay(ray.origin, ray.direction * distance, Color.cyan, 1f);
+
+
         
 
-        Ray ray = new Ray(transform.position, direction * detectionRange);
-        Ray r_detectionDistance = new Ray(transform.position, player.transform.position);
-
-        Debug.DrawRay(ray.origin, ray.direction * distance, Color.cyan);
-        Debug.DrawRay(r_detectionDistance.origin, player.transform.position * detectionRange, Color.magenta);
-
-        RaycastHit playerInRange;
-        
-        if (Physics.Raycast(r_detectionDistance,out playerInRange, detectionRange, layerMask))
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, distance, layerMask))
         {
-            playerInRange.collider.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            Debug.Log("YES");
         }
-        RaycastHit hitPlayer;
-        if (Physics.Raycast(ray, out hitPlayer, detectionRange, layerMask))
-        {
-            //hitPlayer.collider.gameObject.CompareTag("Player");
-            if (hitPlayer.collider.gameObject.tag == "Player")
-            {
-                hitPlayer.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
-                Debug.Log("YES");
-            }
-            
-        }
-        else if (!Physics.Raycast(ray, out hitPlayer, detectionRange, layerMask))
-        { 
+        else{
             playerGO.GetComponent<Renderer>().material.color = Color.green;
+
             Debug.Log("NO");
         }
     }
-    private void FixedUpdate()
-    {
-
-    }
-
+    
 }
