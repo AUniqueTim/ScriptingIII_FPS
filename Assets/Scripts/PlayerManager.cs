@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject[] weapons;
     public GameObject currentWeapon;
     public float weaponDamage;
+    public float weaponRange;
     public float health;
     public float lives;
     public float ammo;
@@ -21,6 +22,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public static float crouchHeight = 5f;
     [SerializeField] public static float jumpHeight = 15f;
     [SerializeField] public static int fallSpeed = 3;
+
+    public Quaternion currentRotation;
 
    
 
@@ -53,5 +56,7 @@ public class PlayerManager : MonoBehaviour
         if (gameObject.tag == "Ketchup" && Weapons.instance.ketchupCount >= Weapons.instance.maxKetchupCount) { Destroy(Weapons.instance.weaponsScript); }
         if (gameObject.tag == "Mustard" && Weapons.instance.mustardCount >= Weapons.instance.maxMustardCount) { Destroy(Weapons.instance.weaponsScript); }
         if (gameObject.tag == "Shake" && Weapons.instance.shakeCount >= Weapons.instance.maxShakeCount) { Destroy(Weapons.instance.weaponsScript); }
+
+        currentRotation = transform.rotation;
     }
 }
