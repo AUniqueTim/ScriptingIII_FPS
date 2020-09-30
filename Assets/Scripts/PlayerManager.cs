@@ -21,7 +21,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public static float runSpeed = 40f;
     [SerializeField] public static float crouchHeight = 5f;
     [SerializeField] public static float jumpHeight = 15f;
-    [SerializeField] public static int fallSpeed = 3;
+    [SerializeField] public float jumpSpeed = 3;
+    [SerializeField] public float fallSpeed = 3;
 
     public Quaternion currentRotation;
 

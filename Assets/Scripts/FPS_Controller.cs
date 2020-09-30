@@ -16,6 +16,7 @@ public class FPS_Controller : MonoBehaviour
     public bool jumpAllowed;
     public bool isJumping;
     public bool jumpComplete;
+    public bool grounded;
 
     Quaternion originalRotation;
     public Transform playerTransform;
@@ -33,6 +34,7 @@ public class FPS_Controller : MonoBehaviour
         {
             PlayerManager.playerSpeed = PlayerManager.runSpeed;
         }
+       
     }
     private void FixedUpdate()
     {
@@ -53,30 +55,43 @@ public class FPS_Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl)) {/*disable standing collider and enable crouch collider*/playerRB.transform.position += Vector3.down * PlayerManager.crouchHeight * Time.deltaTime; }
 
         //Jump
-
+        jumpAllowed = true;
         if (Input.GetKeyDown(KeyCode.Space) && jumpAllowed) { { Jump(); } }
 
         
+        if (grounded = false && Time.time > Time.time + 1.5)
+            {
+                CancelJump();
+            }
+
     }
 
 
     public void Jump()
     {
-        playerRB.transform.position += Vector3.up * PlayerManager.jumpHeight * Time.deltaTime;
+        playerRB.transform.position += Vector3.up * PlayerManager.jumpHeight * PlayerManager.instance.jumpSpeed  * -gravity * Time.deltaTime;
         isJumping = true;
         if (isJumping) { jumpAllowed = false; }
+        
+        Debug.Log("Jumped.");
             
-            CancelJump();
 
     }
     public void CancelJump()
     {
-        playerRB.transform.position += Vector3.down * PlayerManager.jumpHeight * PlayerManager.fallSpeed * gravity * Time.deltaTime;
+        playerRB.transform.position += Vector3.down * PlayerManager.jumpHeight * PlayerManager.instance.fallSpeed * gravity * Time.deltaTime;
         isJumping = false;
-        jumpAllowed = true;
+        
+        Debug.Log("Jump cancelled");
+        
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        grounded = true;
+        
     }
 
-    
+
 
 
 }

@@ -9,6 +9,8 @@ public class Weapons : MonoBehaviour
     [SerializeField] private Transform firstPersonWeapon;
     [SerializeField] private Transform foodHolder;
     [SerializeField] private int fireSpeed;
+    
+
     public Weapons weaponsScript;
     public Transform outsideFoodContainter;
 

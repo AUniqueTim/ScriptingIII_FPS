@@ -15,17 +15,15 @@ public class FiringScript : MonoBehaviour
            
         }
        
-        Debug.DrawRay(ketchupFirePoint.transform.position, Vector3.back * PlayerManager.instance.weaponRange, Color.red);
+        Debug.DrawRay(ketchupFirePoint.transform.position, Vector3.forward * PlayerManager.instance.weaponRange, Color.red);
     }
     void Shoot()
     {
         RaycastHit ketchupHit;
-        if (Physics.Raycast(ketchupFirePoint.transform.position, player.transform.forward * PlayerManager.instance.weaponRange, out ketchupHit, PlayerManager.instance.weaponRange))
+        if (Physics.Raycast(ketchupFirePoint.transform.position, Vector3.forward * PlayerManager.instance.weaponRange, out ketchupHit, PlayerManager.instance.weaponRange))
         {
             Debug.Log(ketchupHit.transform.name);
             
-            
-
         }
     }
 }
