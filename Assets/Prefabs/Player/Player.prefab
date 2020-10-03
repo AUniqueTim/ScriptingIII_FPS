@@ -1399,7 +1399,7 @@ Transform:
   m_GameObject: {fileID: 2643990301739621516}
   m_LocalRotation: {x: 0.12408366, y: -0.07712363, z: -0.009674043, w: 0.98922276}
   m_LocalPosition: {x: 1.27, y: 1.47, z: -2.3899994}
-  m_LocalScale: {x: 1.7493587, y: 1.6350291, z: 1.7177016}
+  m_LocalScale: {x: 1.7493587, y: 1.6350293, z: 1.7177016}
   m_Children:
   - {fileID: 2018409882928288524}
   - {fileID: 4997129398279680123}
@@ -3163,7 +3163,7 @@ Transform:
   m_GameObject: {fileID: 7353267322471591634}
   m_LocalRotation: {x: 0.44553575, y: 0.0021235445, z: -0.19375819, w: 0.874043}
   m_LocalPosition: {x: -1.01, y: 2.17, z: -4}
-  m_LocalScale: {x: 0.51611876, y: 0.51611865, z: 0.51611894}
+  m_LocalScale: {x: 0.5161188, y: 0.5161187, z: 0.51611894}
   m_Children:
   - {fileID: 1326790445336947906}
   - {fileID: 3599840127405661467}
@@ -4000,9 +4000,13 @@ MonoBehaviour:
   - {fileID: 2643990301403362419}
   currentWeapon: {fileID: 0}
   weaponDamage: 0
+  weaponRange: 0
   health: 0
   lives: 0
   ammo: 0
+  jumpSpeed: 3
+  fallSpeed: 3
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &8471903874708079328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4200,10 +4204,7 @@ MonoBehaviour:
   jumpAllowed: 0
   isJumping: 0
   jumpComplete: 0
-  xRotation: 1
-  xRotationSpeed: 1
-  yRotation: 1
-  yRotationSpeed: 1
+  grounded: 0
   playerTransform: {fileID: 8471903875813256814}
 --- !u!1 &8471903875839651256
 GameObject:
@@ -4260,7 +4261,6 @@ GameObject:
   - component: {fileID: 8471903875877137933}
   - component: {fileID: 8471903875877137930}
   - component: {fileID: 8471903875877137931}
-  - component: {fileID: 3190576215486228100}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4334,29 +4334,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903875877137928}
   m_Enabled: 1
---- !u!114 &3190576215486228100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8471903875877137928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c7e04ea9d121146874a2ad622ebc9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRB: {fileID: 8471903875813256815}
-  axes: 0
-  sensitivityX: 1
-  sensitivityY: 1
-  minimumX: -360
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
-  localRotation: {x: 0, y: 0, z: 0}
-  cameraFollowTarget: {fileID: 0}
-  lookSpeed: 0.5
 --- !u!1 &8471903875998823831
 GameObject:
   m_ObjectHideFlags: 0

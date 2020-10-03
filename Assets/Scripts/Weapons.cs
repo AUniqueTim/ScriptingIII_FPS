@@ -40,6 +40,7 @@ public class Weapons : MonoBehaviour
     public bool mustardActive;
     public bool shakeActive;
     public bool noWeaponSelected;
+    public bool hasBurgered;
 
     public Animator weaponAnimator;
 
@@ -63,7 +64,7 @@ public class Weapons : MonoBehaviour
     }
 
     //END SINGLETON
-    private void Awake()
+    public void Awake()
     {
         instance = this;
         weaponsScript = GetComponent<Weapons>();
@@ -73,18 +74,31 @@ public class Weapons : MonoBehaviour
    
     public void Update()
     {
-        AnimateBullet();
-        DestroyFood();
+
+       // DestroyFood();
         WeaponSelect();
         
     }
     public void FixedUpdate()
     {
         InstantiateFood();
+        
     }
-    private void LateUpdate()
+    public void LateUpdate()
     {
-        ResetWeapon();
+        StopBurgering();
+        
+        
+        //if (hasBurgered && weaponAnimator.GetBool("isBurgering")==true) { StopBurgering(); }
+
+        //if (hasBurgered)
+        //{
+        //    PlayerManager.instance.burgerHand.SetActive(false);
+        //}
+        //else if (!isBurgering)
+        //{
+        //    PlayerManager.instance.burgerHand.SetActive(true);
+        //} 
     }
 
 
@@ -142,6 +156,8 @@ public class Weapons : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && burgerActive == true)
         {
+            
+            AnimateBurger();
             ketchupActive = false;
             mustardActive = false;
             shakeActive = false;
@@ -155,12 +171,16 @@ public class Weapons : MonoBehaviour
             isKetchuping = false;
             isMustarding = false;
             isShaking = false;
+            
             Debug.Log("Burger instantiated. Total burgers: " + burgerCount);
+            
         }
-        if (!Input.GetKey(KeyCode.Mouse1)) { /*isBurgering = false;*/ }
+        //else if (!Input.GetKeyDown(KeyCode.Mouse1)) { isBurgering = false; }
 
         if ( Input.GetKeyDown(KeyCode.Mouse0) && ketchupActive == true)
         {
+            
+            AnimateKetchup();
             burgerActive = false;
             mustardActive = false;
             shakeActive = false;
@@ -176,10 +196,12 @@ public class Weapons : MonoBehaviour
             isShaking = false;
             Debug.Log("Ketchup instantiated. Total ketchups: " + ketchupCount);
         }
-        if (!Input.GetKey(KeyCode.Mouse0)) { isKetchuping = false; }
+        //if (!Input.GetKey(KeyCode.Mouse0)) { isKetchuping = false; }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && mustardActive == true)
         {
+            
+            AnimateMustard();
             burgerActive = false;
             ketchupActive = false;
             shakeActive = false;
@@ -195,10 +217,12 @@ public class Weapons : MonoBehaviour
             isShaking = false;
             Debug.Log("Mustard instantiated. Total mustards: " + mustardCount);
         }
-        if (!Input.GetKey(KeyCode.Mouse0)) { isMustarding = false; }
+        //if (!Input.GetKey(KeyCode.Mouse0)) { isMustarding = false; }
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && shakeActive == true)
         {
+            
+            AnimateShake();
             burgerActive = false;
             ketchupActive = false;
             mustardActive = false;
@@ -214,32 +238,81 @@ public class Weapons : MonoBehaviour
             isKetchuping = false;
             Debug.Log("Shake instantiated. Total shakes: " + shakeCount);
         }
-        if (!Input.GetKey(KeyCode.Mouse0)) { isShaking = false; }
+        //if (!Input.GetKey(KeyCode.Mouse0)) { isShaking = false; }
 
     }
 
-    public void DestroyFood()
+    //public void DestroyFood()
+    //{
+
+    //    if (instance.burgerCount >= maxBurgerCount) if (PlayerManager.instance.burger.tag == "Burger") { Destroy(PlayerManager.instance.burger); }
+    //    if (instance.ketchupCount >= maxKetchupCount) if (PlayerManager.instance.ketchup.tag == "Ketchup") { Destroy(PlayerManager.instance.ketchup); }
+    //    if (instance.mustardCount >= maxMustardCount) if (PlayerManager.instance.mustard.tag == "Mustard") { Destroy(PlayerManager.instance.mustard); }
+    //    if (instance.shakeCount >= maxMustardCount) if (PlayerManager.instance.shake.tag == "Shake") { Destroy(PlayerManager.instance.shake); }
+    //}
+
+    public void AnimateBurger()
+
     {
+        if (burgerActive && Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            weaponAnimator.SetBool("isBurgering", true);
+            Debug.Log("Burgering.");
+        }
+        else if (!burgerActive)
+        {
+            StopBurgering();
+        }
         
-        if (instance.burgerCount >= maxBurgerCount) if (gameObject.tag == "Burger") {  Destroy(PlayerManager.instance.burger); }
-        if (instance.ketchupCount >= maxKetchupCount) if (gameObject.tag == "Ketchup") { Destroy(PlayerManager.instance.ketchup); }
-        if (instance.mustardCount >= maxMustardCount) if (gameObject.tag == "Mustard") { Destroy(PlayerManager.instance.mustard); }
-        if (instance.shakeCount >= maxMustardCount) if (gameObject.tag == "Shake") { Destroy(PlayerManager.instance.shake); }
-    }
 
-    public void AnimateBullet()
-    {
-        if (isBurgering == true) { weaponAnimator.SetBool("isBurgering", true); if (isBurgering == false) { weaponAnimator.SetBool("isBurgering", false); }Debug.Log("Burgering.");  }
-        if (isKetchuping == true) { weaponAnimator.SetBool("isKetchuping", true); }
-        if (isMustarding == true) { weaponAnimator.SetBool("isMustarding", true); }
-        if (isShaking == true) { weaponAnimator.SetBool("isShaking", true); }
     }
+    
+       
+    
+    public void StopBurgering()
+    {
+
+        weaponAnimator.SetBool("isBurgering", false);
+        Debug.Log("Stopped burgering");
+
+       
+    }
+    public void AnimateKetchup()
+    {
+        weaponAnimator.SetBool("isKetchuping", true);
+    }
+    public void StopKetchuping()
+    {
+        weaponAnimator.SetBool("isKetchuping", false);
+    }
+    public void AnimateMustard()
+    {
+        weaponAnimator.SetBool("isMustarding", true);
+    }
+    public void StopMustarding()
+    {
+        weaponAnimator.SetBool("isMustarding", false);
+    }
+    public void AnimateShake()
+    {
+        weaponAnimator.SetBool("isShaking", true);
+    }
+    public void StopShaking()
+    {
+        weaponAnimator.SetBool("isShaking", false);
+    }
+        
+    
 
     public void ResetWeapon()
     {
-        isBurgering = false;
-        isKetchuping = false;
-        isMustarding = false;
-        isShaking= false;
+        //isBurgering = false;
+        //isKetchuping = false;
+        //isMustarding = false;
+        //isShaking = false;
+        StopBurgering();
+        StopKetchuping();
+        StopMustarding();
+        StopShaking();
     }
 }

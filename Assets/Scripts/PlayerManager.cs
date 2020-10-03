@@ -9,6 +9,11 @@ public class PlayerManager : MonoBehaviour
     public GameObject mustard;
     public GameObject shake;
 
+    public GameObject burgerHand;
+    public GameObject ketchupHand;
+    public GameObject mustardHand;
+    public GameObject shakeHand;
+
     public GameObject[] weapons;
     public GameObject currentWeapon;
     public float weaponDamage;
