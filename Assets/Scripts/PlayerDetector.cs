@@ -14,19 +14,13 @@ public class PlayerDetector : MonoBehaviour
     [SerializeField] private Transform cyanRayOrigin;
     [SerializeField] private Transform detectionDistanceTransform;
 
-    private Vector3 playerDirection;
     public float detectionDistance;
     public Vector3 detectionRangeVector;
     public Animator lunchLadyAnimator;
-
     public Ray ray;
-
-
-    
 
     void Awake()
     {
-        playerDirection = player.position - transform.position;
         lunchLadyAnimator = GetComponent<Animator>();
         
     }
@@ -53,14 +47,11 @@ public class PlayerDetector : MonoBehaviour
         RaycastHit hitPlayer;
         if (Physics.Raycast(ray, out hitPlayer, detectionDistance, layerMask))
         {
-            //hitPlayer.collider.gameObject.CompareTag("Player");
             if (hitPlayer.collider.gameObject.tag == "Player")
             {
                 hitPlayer.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
                 Debug.Log("YES");
-                
             }
-            
         }
         else if (!Physics.Raycast(ray, out hitPlayer, detectionDistance, layerMask))
         { 

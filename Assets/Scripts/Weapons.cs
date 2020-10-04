@@ -44,6 +44,8 @@ public class Weapons : MonoBehaviour
 
     public Animator weaponAnimator;
 
+    public MeshRenderer burgerMesh;
+
     //START SINGLETON
     public static Weapons Instance
     {
@@ -69,13 +71,14 @@ public class Weapons : MonoBehaviour
         instance = this;
         weaponsScript = GetComponent<Weapons>();
         weaponAnimator = GetComponent<Animator>();
+        burgerMesh = PlayerManager.instance.burgerHand.GetComponent<MeshRenderer>();
     }
 
    
     public void Update()
     {
 
-       // DestroyFood();
+        DestroyFood();
         WeaponSelect();
         
     }
@@ -86,19 +89,7 @@ public class Weapons : MonoBehaviour
     }
     public void LateUpdate()
     {
-        StopBurgering();
-        
-        
-        //if (hasBurgered && weaponAnimator.GetBool("isBurgering")==true) { StopBurgering(); }
 
-        //if (hasBurgered)
-        //{
-        //    PlayerManager.instance.burgerHand.SetActive(false);
-        //}
-        //else if (!isBurgering)
-        //{
-        //    PlayerManager.instance.burgerHand.SetActive(true);
-        //} 
     }
 
 
@@ -156,27 +147,36 @@ public class Weapons : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && burgerActive == true)
         {
-            
-            AnimateBurger();
             ketchupActive = false;
             mustardActive = false;
             shakeActive = false;
             Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.position, bulletSpawn.rotation);
-            //burgerCloneRB.transform.Translate(Vector3.forward * fireSpeed, Space.World);
+            
             burgerCloneRB.AddForce(Vector3.forward * fireSpeed);
-            PlayerManager.instance.currentWeapon = PlayerManager.instance.burger;
+            PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
             PlayerManager.instance.burger.SetActive(true);
             burgerCount += 1;
             isBurgering = true;
             isKetchuping = false;
             isMustarding = false;
             isShaking = false;
-            
             Debug.Log("Burger instantiated. Total burgers: " + burgerCount);
-            
-        }
-        //else if (!Input.GetKeyDown(KeyCode.Mouse1)) { isBurgering = false; }
 
+          
+            if (burgerActive && isBurgering)
+            {
+                AnimateBurger();
+            }
+            if (!burgerActive)
+            {
+                StopBurgering();
+            } 
+
+        }
+        
+        
+        
+        
         if ( Input.GetKeyDown(KeyCode.Mouse0) && ketchupActive == true)
         {
             
@@ -185,7 +185,7 @@ public class Weapons : MonoBehaviour
             mustardActive = false;
             shakeActive = false;
             Rigidbody ketchupCloneRB = Instantiate(ketchup, bulletSpawn.position, bulletSpawn.rotation);
-            //ketchupCloneRB.transform.Translate(Vector3.forward * fireSpeed, Space.World);
+            
             ketchupCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.ketchup;
             PlayerManager.instance.ketchup.SetActive(true);
@@ -196,8 +196,7 @@ public class Weapons : MonoBehaviour
             isShaking = false;
             Debug.Log("Ketchup instantiated. Total ketchups: " + ketchupCount);
         }
-        //if (!Input.GetKey(KeyCode.Mouse0)) { isKetchuping = false; }
-
+        
         if (Input.GetKeyDown(KeyCode.Mouse0) && mustardActive == true)
         {
             
@@ -206,7 +205,7 @@ public class Weapons : MonoBehaviour
             ketchupActive = false;
             shakeActive = false;
             Rigidbody mustardCloneRB = Instantiate(mustard, bulletSpawn.position, bulletSpawn.rotation);
-           // mustardCloneRB.transform.Translate(Vector3.forward * fireSpeed, Space.World);
+          
             mustardCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard;
             PlayerManager.instance.mustard.SetActive(true);
@@ -217,8 +216,7 @@ public class Weapons : MonoBehaviour
             isShaking = false;
             Debug.Log("Mustard instantiated. Total mustards: " + mustardCount);
         }
-        //if (!Input.GetKey(KeyCode.Mouse0)) { isMustarding = false; }
-
+      
         if (Input.GetKeyDown(KeyCode.Mouse1) && shakeActive == true)
         {
             
@@ -227,7 +225,7 @@ public class Weapons : MonoBehaviour
             ketchupActive = false;
             mustardActive = false;
             Rigidbody shakeCloneRB =  Instantiate(shake, bulletSpawn.position, bulletSpawn.rotation);
-            //shakeCloneRB.transform.Translate(Vector3.forward * fireSpeed, Space.World);
+      
             shakeCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.shake;
             PlayerManager.instance.shake.SetActive(true);
@@ -238,42 +236,45 @@ public class Weapons : MonoBehaviour
             isKetchuping = false;
             Debug.Log("Shake instantiated. Total shakes: " + shakeCount);
         }
-        //if (!Input.GetKey(KeyCode.Mouse0)) { isShaking = false; }
+       
 
     }
 
-    //public void DestroyFood()
-    //{
+    public void DestroyFood()
+    {
 
-    //    if (instance.burgerCount >= maxBurgerCount) if (PlayerManager.instance.burger.tag == "Burger") { Destroy(PlayerManager.instance.burger); }
-    //    if (instance.ketchupCount >= maxKetchupCount) if (PlayerManager.instance.ketchup.tag == "Ketchup") { Destroy(PlayerManager.instance.ketchup); }
-    //    if (instance.mustardCount >= maxMustardCount) if (PlayerManager.instance.mustard.tag == "Mustard") { Destroy(PlayerManager.instance.mustard); }
-    //    if (instance.shakeCount >= maxMustardCount) if (PlayerManager.instance.shake.tag == "Shake") { Destroy(PlayerManager.instance.shake); }
-    //}
+        if (burgerCount >= maxBurgerCount) if (PlayerManager.instance.burger.tag == "Burger") { Destroy(PlayerManager.instance.burger); }
+        if (ketchupCount >= maxKetchupCount) if (PlayerManager.instance.ketchup.tag == "Ketchup") { Destroy(PlayerManager.instance.ketchup); }
+        if (mustardCount >= maxMustardCount) if (PlayerManager.instance.mustard.tag == "Mustard") { Destroy(PlayerManager.instance.mustard); }
+        if (shakeCount >= maxMustardCount) if (PlayerManager.instance.shake.tag == "Shake") { Destroy(PlayerManager.instance.shake); }
+    }
 
     public void AnimateBurger()
-
     {
-        if (burgerActive && Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            weaponAnimator.SetBool("isBurgering", true);
-            Debug.Log("Burgering.");
-        }
-        else if (!burgerActive)
+    weaponAnimator.SetBool("isBurgering", true);
+    hasBurgered = true;
+    Debug.Log("Burgering.");
+
+        if (hasBurgered)
         {
             StopBurgering();
+            isBurgering = false;
         }
-        
-
     }
     
        
     
     public void StopBurgering()
     {
+        if (hasBurgered)
+        {
+            weaponAnimator.SetBool("isBurgering", false);
+            burgerMesh.gameObject.SetActive(false);
+        }
 
-        weaponAnimator.SetBool("isBurgering", false);
-        Debug.Log("Stopped burgering");
+        
+        Debug.Log("Stopped burgering.");
+        
 
        
     }
