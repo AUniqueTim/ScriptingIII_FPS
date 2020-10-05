@@ -92,6 +92,9 @@ public class FPS_Controller : MonoBehaviour
     }
 
 
+    public void EnemyHitPlayer()
+    {
 
+    }
 
 }

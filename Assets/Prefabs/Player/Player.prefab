@@ -1,5 +1,227 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1224148445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224148446}
+  - component: {fileID: 1224148450}
+  - component: {fileID: 1224148449}
+  - component: {fileID: 1224148448}
+  m_Layer: 8
+  m_Name: Capsule
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1224148446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224148445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6, y: -7.3, z: -60}
+  m_LocalScale: {x: 19.77954, y: 15.969484, z: 16.978466}
+  m_Children:
+  - {fileID: 1356325611}
+  m_Father: {fileID: 8471903874673817793}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1224148450
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224148445}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1224148449
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224148445}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &1224148448
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224148445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1290049691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290049692}
+  m_Layer: 8
+  m_Name: Ketchup Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290049692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290049691}
+  m_LocalRotation: {x: -0.09192881, y: -0.000000007450581, z: 9.313226e-10, w: 0.9957656}
+  m_LocalPosition: {x: 0.959157, y: 0.8587595, z: 4.5234146}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8471903875813256814}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: -19.063, y: -5.119, z: 0.772}
+--- !u!1 &1356325610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356325611}
+  - component: {fileID: 1356325614}
+  - component: {fileID: 1356325613}
+  - component: {fileID: 1356325612}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356325611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356325610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.147, z: -0}
+  m_LocalScale: {x: 0.79586, y: 0.79586, z: 0.79586}
+  m_Children: []
+  m_Father: {fileID: 1224148446}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1356325614
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356325610}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1356325613
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356325610}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &1356325612
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356325610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &803782667279649834
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +235,7 @@ GameObject:
   - component: {fileID: 3972403652014186083}
   - component: {fileID: 3311906302916005507}
   - component: {fileID: 8471903875743343037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +344,7 @@ GameObject:
   - component: {fileID: 5933222552285217974}
   - component: {fileID: 3972403652173798965}
   - component: {fileID: 3311906302671851221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,13 +441,13 @@ GameObject:
   - component: {fileID: 1179819837156441790}
   - component: {fileID: 8471903875752805234}
   - component: {fileID: 8471903874278706339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KetchupBottle_weapon
-  m_TagString: Ketchup
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1179819837156441777
 Transform:
   m_ObjectHideFlags: 0
@@ -233,13 +455,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179819837156441789}
-  m_LocalRotation: {x: 0.5115494, y: 0.44585067, z: 0.14928022, w: 0.7192009}
-  m_LocalPosition: {x: 5.1024857, y: -20.48, z: -1.1699982}
-  m_LocalScale: {x: 1.5296137, y: 1.5296141, z: 1.5296135}
+  m_LocalRotation: {x: 0.44830033, y: 0.42615974, z: 0.13972947, w: 0.7732337}
+  m_LocalPosition: {x: 5.0759974, y: -42.68, z: -32.98503}
+  m_LocalScale: {x: 1.5296136, y: 1.5296143, z: 1.5296137}
   m_Children:
   - {fileID: 1179819837430179949}
-  m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 5
+  m_Father: {fileID: 8471903875877137933}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 33.054, y: 108.673004, z: 98.382}
 --- !u!33 &1179819837156441776
 MeshFilter:
@@ -346,7 +568,7 @@ GameObject:
   - component: {fileID: 1179819837238919175}
   - component: {fileID: 1179819837238919168}
   - component: {fileID: 1179819837238919169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nozzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +664,7 @@ GameObject:
   - component: {fileID: 1179819837430179951}
   - component: {fileID: 1179819837430179950}
   - component: {fileID: 8471903874470788170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +775,7 @@ GameObject:
   - component: {fileID: 1179819837483514911}
   - component: {fileID: 1179819837483514904}
   - component: {fileID: 1179819837483514905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NozzleBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +871,7 @@ GameObject:
   - component: {fileID: 1179819837999912987}
   - component: {fileID: 1179819837999912986}
   - component: {fileID: 8471903875099263419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NozzleBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +981,7 @@ GameObject:
   - component: {fileID: 1179819838053567587}
   - component: {fileID: 1179819838053567596}
   - component: {fileID: 1179819838053567597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +1078,7 @@ GameObject:
   - component: {fileID: 1179819838811251715}
   - component: {fileID: 1179819838811251714}
   - component: {fileID: 8471903875919082724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nozzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +1186,9 @@ GameObject:
   - component: {fileID: 1179819838864054962}
   - component: {fileID: 1179819838864054963}
   - component: {fileID: 1179819838864054972}
-  m_Layer: 0
+  - component: {fileID: 158626211}
+  - component: {fileID: 158626212}
+  m_Layer: 8
   m_Name: KetchupBottle_hand
   m_TagString: Ketchup
   m_Icon: {fileID: 0}
@@ -986,7 +1210,7 @@ Transform:
   - {fileID: 1179819837483514906}
   - {fileID: 1179819837238919170}
   m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 33.054, y: 108.673004, z: 98.382}
 --- !u!33 &1179819838864054963
 MeshFilter:
@@ -1037,6 +1261,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &158626211
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179819838864054974}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737e506debba0874f94499968cdf93ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &158626212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179819838864054974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c947a73bf83eca40b9905d923394ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonWeapon: {fileID: 3190576214007650034}
+  foodHolder: {fileID: 0}
+  fireSpeed: 5
+  weaponsScript: {fileID: 158626212}
+  outsideFoodContainter: {fileID: 0}
+  burgerCount: 0
+  maxBurgerCount: 5
+  ketchupCount: 0
+  maxKetchupCount: 5
+  mustardCount: 0
+  maxMustardCount: 5
+  shakeCount: 0
+  maxShakeCount: 5
+  burger: {fileID: 8471903875752805237}
+  ketchup: {fileID: 8471903875752805234}
+  mustard: {fileID: 8471903875752805218}
+  shake: {fileID: 8471903875752805190}
+  handBurger: {fileID: 6608485709162446507}
+  handKetchup: {fileID: 1179819838864054974}
+  handMustard: {fileID: 7353267322471591634}
+  handShake: {fileID: 2643990301739621516}
+  bulletSpawn: {fileID: 3190576214007650034}
+  spawningAllowed: 0
+  isBurgering: 0
+  isKetchuping: 0
+  isMustarding: 0
+  isShaking: 0
+  burgerActive: 0
+  ketchupActive: 0
+  mustardActive: 0
+  shakeActive: 0
+  noWeaponSelected: 0
+  hasBurgered: 0
+  weaponAnimator: {fileID: 158626211}
+  burgerMesh: {fileID: 1179819838864054972}
 --- !u!1 &2437599312326211271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1339,7 @@ GameObject:
   - component: {fileID: 1396648927408411617}
   - component: {fileID: 2721722155075082497}
   - component: {fileID: 6506929032247896065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nozzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1435,7 @@ GameObject:
   - component: {fileID: 2721722154995971426}
   - component: {fileID: 6506929032328119394}
   - component: {fileID: 8471903876222246180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nozzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,13 +1546,13 @@ GameObject:
   - component: {fileID: 2197752768651763311}
   - component: {fileID: 8471903875752805190}
   - component: {fileID: 8471903875098988957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shake_weapon
-  m_TagString: Shake
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9086844955301413865
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,14 +1560,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2643990301403362419}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7264856, y: -17.4, z: 0.41500092}
-  m_LocalScale: {x: 1.7493588, y: 1.6350287, z: 1.7177017}
+  m_LocalRotation: {x: -0.074447975, y: -0.042808477, z: 0.003191791, w: 0.9963005}
+  m_LocalPosition: {x: 1.7, y: -39.6, z: -31.4}
+  m_LocalScale: {x: 1.7493589, y: 1.6350284, z: 1.7177018}
   m_Children:
   - {fileID: 2018409883269413875}
   - {fileID: 4997129398619609220}
-  m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 7
+  m_Father: {fileID: 8471903875877137933}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5921447335706881135
 MeshFilter:
@@ -1383,7 +1673,9 @@ GameObject:
   - component: {fileID: 9086844955635723030}
   - component: {fileID: 5921447337644835984}
   - component: {fileID: 7252386824404302242}
-  m_Layer: 0
+  - component: {fileID: 1722185933}
+  - component: {fileID: 1722185935}
+  m_Layer: 8
   m_Name: Shake_hand
   m_TagString: Shake
   m_Icon: {fileID: 0}
@@ -1404,7 +1696,7 @@ Transform:
   - {fileID: 2018409882928288524}
   - {fileID: 4997129398279680123}
   m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 14.123, y: -9.196, z: -2.262}
 --- !u!33 &5921447337644835984
 MeshFilter:
@@ -1455,6 +1747,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1722185933
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643990301739621516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737e506debba0874f94499968cdf93ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1722185935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643990301739621516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c947a73bf83eca40b9905d923394ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonWeapon: {fileID: 3190576214007650034}
+  foodHolder: {fileID: 0}
+  fireSpeed: 5
+  weaponsScript: {fileID: 1722185935}
+  outsideFoodContainter: {fileID: 0}
+  burgerCount: 0
+  maxBurgerCount: 5
+  ketchupCount: 0
+  maxKetchupCount: 5
+  mustardCount: 0
+  maxMustardCount: 5
+  shakeCount: 0
+  maxShakeCount: 5
+  burger: {fileID: 8471903875752805237}
+  ketchup: {fileID: 8471903875752805234}
+  mustard: {fileID: 8471903875752805218}
+  shake: {fileID: 8471903875752805190}
+  handBurger: {fileID: 6608485709162446507}
+  handKetchup: {fileID: 1179819838864054974}
+  handMustard: {fileID: 7353267322471591634}
+  handShake: {fileID: 2643990301739621516}
+  bulletSpawn: {fileID: 3190576214007650034}
+  spawningAllowed: 0
+  isBurgering: 0
+  isKetchuping: 0
+  isMustarding: 0
+  isShaking: 0
+  burgerActive: 0
+  ketchupActive: 0
+  mustardActive: 0
+  shakeActive: 0
+  noWeaponSelected: 0
+  hasBurgered: 0
+  weaponAnimator: {fileID: 1722185933}
+  burgerMesh: {fileID: 0}
 --- !u!1 &3159413349677265680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1825,7 @@ GameObject:
   - component: {fileID: 3258132874897026054}
   - component: {fileID: 3020685365416197902}
   - component: {fileID: 332555393805091010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopBun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1921,7 @@ GameObject:
   - component: {fileID: 3020685365575417688}
   - component: {fileID: 332555394098987156}
   - component: {fileID: 8471903875887570609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopBun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1669,7 +2027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3190576214007650034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1683,13 +2041,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3190576214007650035}
-  m_LocalRotation: {x: -0, y: -0.06992275, z: -0, w: 0.9975524}
-  m_LocalPosition: {x: -0.17, y: 2.81, z: 5.49}
+  m_LocalRotation: {x: -0.058730043, y: 0.03421447, z: -0.1046344, w: 0.99218535}
+  m_LocalPosition: {x: 5.8, y: 6, z: 8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -8.019, z: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: -6.28, y: 4.627, z: -12.294}
 --- !u!1 &4909706438188054025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,11 +2848,11 @@ GameObject:
   - component: {fileID: 8471903875004443522}
   m_Layer: 0
   m_Name: Burger_weapon
-  m_TagString: Burger
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8605612288347324897
 Transform:
   m_ObjectHideFlags: 0
@@ -2502,9 +2860,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6608485708851248893}
-  m_LocalRotation: {x: -0, y: 0.0055770483, z: -0, w: 0.9999845}
-  m_LocalPosition: {x: -0.9875146, y: -19.08, z: 0.2300005}
-  m_LocalScale: {x: 0.758879, y: 0.7588784, z: 0.758879}
+  m_LocalRotation: {x: -0.07446462, y: -0.037251394, z: 0.0027765406, w: 0.9965238}
+  m_LocalPosition: {x: -1.0140026, y: -41.28, z: -31.585033}
+  m_LocalScale: {x: 0.758879, y: 0.7588783, z: 0.758879}
   m_Children:
   - {fileID: 3185638823152807786}
   - {fileID: 7442219829495818809}
@@ -2513,8 +2871,8 @@ Transform:
   - {fileID: 6704098680342532331}
   - {fileID: 3146950338109741894}
   - {fileID: 7761730524091718273}
-  m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 4
+  m_Father: {fileID: 8471903875877137933}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0.63900006, z: 0}
 --- !u!54 &8471903875752805237
 Rigidbody:
@@ -2556,6 +2914,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8605612288707150263}
   - component: {fileID: 6608485709162446506}
+  - component: {fileID: 1242899538}
+  - component: {fileID: 1242899536}
   m_Layer: 0
   m_Name: Burger_hand
   m_TagString: Burger
@@ -2582,7 +2942,7 @@ Transform:
   - {fileID: 3146950338336922384}
   - {fileID: 7761730524385024727}
   m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -8.184, y: -15.523, z: 29.883}
 --- !u!23 &6608485709162446506
 MeshRenderer:
@@ -2625,6 +2985,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1242899538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608485709162446507}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737e506debba0874f94499968cdf93ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1242899536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608485709162446507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c947a73bf83eca40b9905d923394ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonWeapon: {fileID: 3190576214007650034}
+  foodHolder: {fileID: 0}
+  fireSpeed: 1074
+  weaponsScript: {fileID: 1242899536}
+  outsideFoodContainter: {fileID: 0}
+  burgerCount: 0
+  maxBurgerCount: 5
+  ketchupCount: 0
+  maxKetchupCount: 5
+  mustardCount: 0
+  maxMustardCount: 5
+  shakeCount: 0
+  maxShakeCount: 5
+  burger: {fileID: 8471903875752805237}
+  ketchup: {fileID: 8471903875752805234}
+  mustard: {fileID: 8471903875752805218}
+  shake: {fileID: 8471903875752805190}
+  handBurger: {fileID: 6608485709162446507}
+  handKetchup: {fileID: 1179819838864054974}
+  handMustard: {fileID: 7353267322471591634}
+  handShake: {fileID: 2643990301739621516}
+  bulletSpawn: {fileID: 3190576214007650034}
+  spawningAllowed: 0
+  isBurgering: 0
+  isKetchuping: 0
+  isMustarding: 0
+  isShaking: 0
+  burgerActive: 0
+  ketchupActive: 0
+  mustardActive: 0
+  shakeActive: 0
+  noWeaponSelected: 0
+  hasBurgered: 0
+  weaponAnimator: {fileID: 1242899538}
+  burgerMesh: {fileID: 6608485709162446506}
 --- !u!1 &6926953325827808607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,11 +3449,11 @@ GameObject:
   - component: {fileID: 8471903876254913871}
   m_Layer: 0
   m_Name: MustardBottle_weapon
-  m_TagString: Mustard
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6583922562350135886
 Transform:
   m_ObjectHideFlags: 0
@@ -3035,13 +3461,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7353267322385056433}
-  m_LocalRotation: {x: 0.49078315, y: -0.089357235, z: -0.005862425, w: 0.8666677}
-  m_LocalPosition: {x: -0.15751457, y: -17.651001, z: -0.81799984}
-  m_LocalScale: {x: 0.5161189, y: 0.51611847, z: 0.51611865}
+  m_LocalRotation: {x: 0.42498204, y: -0.12499735, z: 0.02458763, w: 0.8961927}
+  m_LocalPosition: {x: -0.18400522, y: -39.851006, z: -32.63306}
+  m_LocalScale: {x: 0.51611894, y: 0.51611847, z: 0.5161187}
   m_Children:
   - {fileID: 1326790445424378017}
-  m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 6
+  m_Father: {fileID: 8471903875877137933}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 58.173, y: -17.735, z: -10.695}
 --- !u!33 &335203067994198265
 MeshFilter:
@@ -3147,6 +3573,8 @@ GameObject:
   - component: {fileID: 6583922562304628269}
   - component: {fileID: 335203068008053914}
   - component: {fileID: 5260796872858872153}
+  - component: {fileID: 1651608550}
+  - component: {fileID: 1651608549}
   m_Layer: 0
   m_Name: MustardBottle_hand
   m_TagString: Mustard
@@ -3169,7 +3597,7 @@ Transform:
   - {fileID: 3599840127405661467}
   - {fileID: 296523646121331587}
   m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 51.229004, y: -15.651001, z: -32.538002}
 --- !u!33 &335203068008053914
 MeshFilter:
@@ -3220,6 +3648,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1651608550
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353267322471591634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737e506debba0874f94499968cdf93ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1651608549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353267322471591634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c947a73bf83eca40b9905d923394ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonWeapon: {fileID: 3190576214007650034}
+  foodHolder: {fileID: 0}
+  fireSpeed: 5
+  weaponsScript: {fileID: 1651608549}
+  outsideFoodContainter: {fileID: 0}
+  burgerCount: 0
+  maxBurgerCount: 5
+  ketchupCount: 0
+  maxKetchupCount: 5
+  mustardCount: 0
+  maxMustardCount: 5
+  shakeCount: 0
+  maxShakeCount: 5
+  burger: {fileID: 8471903875752805237}
+  ketchup: {fileID: 8471903875752805234}
+  mustard: {fileID: 8471903875752805218}
+  shake: {fileID: 8471903875752805190}
+  handBurger: {fileID: 6608485709162446507}
+  handKetchup: {fileID: 1179819838864054974}
+  handMustard: {fileID: 7353267322471591634}
+  handShake: {fileID: 2643990301739621516}
+  bulletSpawn: {fileID: 3190576214007650034}
+  spawningAllowed: 0
+  isBurgering: 0
+  isKetchuping: 0
+  isMustarding: 0
+  isShaking: 0
+  burgerActive: 0
+  ketchupActive: 0
+  mustardActive: 0
+  shakeActive: 0
+  noWeaponSelected: 0
+  hasBurgered: 0
+  weaponAnimator: {fileID: 1651608550}
+  burgerMesh: {fileID: 0}
 --- !u!1 &7702277625472121325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,7 +3836,7 @@ GameObject:
   - component: {fileID: 5248281868847873880}
   - component: {fileID: 9112019609487947408}
   - component: {fileID: 4262658522341677056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3437,7 +3931,7 @@ GameObject:
   - component: {fileID: 1225091796793211545}
   - component: {fileID: 3461537707420219797}
   - component: {fileID: 1627846360945290447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lettuce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3533,7 +4027,7 @@ GameObject:
   - component: {fileID: 3461537707194022339}
   - component: {fileID: 1627846360651000985}
   - component: {fileID: 8471903875957874584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lettuce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3642,7 +4136,7 @@ GameObject:
   - component: {fileID: 1321659668277840167}
   - component: {fileID: 7971704138133402703}
   - component: {fileID: 2794379007172200544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3739,7 +4233,7 @@ GameObject:
   - component: {fileID: 7971704138010728492}
   - component: {fileID: 2794379007219016707}
   - component: {fileID: 8471903874712826086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3847,7 +4341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471903874596415714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BurgerSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3862,11 +4356,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903874596415715}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3775146, y: -3.3457441, z: -12.440001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8471903876165556127}
-  m_RootOrder: 0
+  m_Father: {fileID: 8471903875813256814}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8471903874652775204
 GameObject:
@@ -3878,7 +4372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8471903874652775207}
   - component: {fileID: 8471903874652775206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3908,7 +4402,7 @@ BoxCollider:
   m_GameObject: {fileID: 8471903874652775204}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8.867707, y: 1, z: 8.916563}
   m_Center: {x: 1.4697757, y: 0, z: 1.0192938}
@@ -3921,9 +4415,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471903874673817793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerModel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3935,13 +4429,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903874673817806}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.18, y: 2.49, z: 0.37}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_LocalRotation: {x: 2.0372681e-10, y: 0.11107184, z: 9.313226e-10, w: 0.9938124}
+  m_LocalPosition: {x: 11.71, y: 0.7, z: 39.62}
+  m_LocalScale: {x: 0.78148, y: 0.91474, z: 0.89933}
+  m_Children:
+  - {fileID: 1224148446}
   m_Father: {fileID: 8471903875813256814}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 12.754, z: 0}
 --- !u!1 &8471903874708079342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3952,8 +4447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8471903874708079329}
   - component: {fileID: 3190576215091489215}
-  - component: {fileID: 8471903874708079328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3973,7 +4467,6 @@ Transform:
   m_Children:
   - {fileID: 8471903875813256814}
   - {fileID: 8471903874652775207}
-  - {fileID: 8471903876165556127}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3993,6 +4486,10 @@ MonoBehaviour:
   ketchup: {fileID: 1179819837156441789}
   mustard: {fileID: 7353267322385056433}
   shake: {fileID: 2643990301403362419}
+  burgerHand: {fileID: 6608485709162446507}
+  ketchupHand: {fileID: 1179819838864054974}
+  mustardHand: {fileID: 7353267322471591634}
+  shakeHand: {fileID: 2643990301739621516}
   weapons:
   - {fileID: 6608485708851248893}
   - {fileID: 1179819837156441789}
@@ -4000,58 +4497,13 @@ MonoBehaviour:
   - {fileID: 2643990301403362419}
   currentWeapon: {fileID: 0}
   weaponDamage: 0
-  weaponRange: 0
+  weaponRange: 100
   health: 0
   lives: 0
   ammo: 0
   jumpSpeed: 3
-  fallSpeed: 3
+  fallSpeed: 0.3
   currentRotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8471903874708079328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8471903874708079342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c947a73bf83eca40b9905d923394ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstPersonWeapon: {fileID: 3190576214007650034}
-  foodHolder: {fileID: 0}
-  fireSpeed: 5
-  weaponsScript: {fileID: 8471903874708079328}
-  outsideFoodContainter: {fileID: 0}
-  burgerCount: 0
-  maxBurgerCount: 5
-  ketchupCount: 0
-  maxKetchupCount: 5
-  mustardCount: 0
-  maxMustardCount: 5
-  shakeCount: 0
-  maxShakeCount: 5
-  burger: {fileID: 8471903875752805237}
-  ketchup: {fileID: 8471903875752805234}
-  mustard: {fileID: 8471903875752805218}
-  shake: {fileID: 8471903875752805190}
-  handBurger: {fileID: 6608485709162446507}
-  handKetchup: {fileID: 1179819838864054974}
-  handMustard: {fileID: 7353267322471591634}
-  handShake: {fileID: 2643990301739621516}
-  bulletSpawn: {fileID: 3190576214007650034}
-  spawningAllowed: 0
-  isBurgering: 0
-  isKetchuping: 0
-  isMustarding: 0
-  isShaking: 0
-  burgerActive: 0
-  ketchupActive: 0
-  mustardActive: 0
-  shakeActive: 0
-  noWeaponSelected: 0
-  weaponAnimator: {fileID: 8471903876165556126}
 --- !u!1 &8471903875587986800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4061,7 +4513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471903875587986803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KetchupSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4076,11 +4528,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903875587986800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3775146, y: -3.3457441, z: -12.440001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8471903876165556127}
-  m_RootOrder: 2
+  m_Father: {fileID: 8471903875813256814}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8471903875664867227
 GameObject:
@@ -4091,7 +4543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471903875664867226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShakeSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4106,11 +4558,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903875664867227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3775146, y: -3.3457441, z: -12.440001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8471903876165556127}
-  m_RootOrder: 3
+  m_Father: {fileID: 8471903875813256814}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8471903875813256812
 GameObject:
@@ -4124,7 +4576,8 @@ GameObject:
   - component: {fileID: 8471903875813256815}
   - component: {fileID: 8471903875813256801}
   - component: {fileID: 5852120652539936768}
-  m_Layer: 0
+  - component: {fileID: 1306561696}
+  m_Layer: 8
   m_Name: PlayerObject
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4139,21 +4592,23 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903875813256812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: -0, y: 0, z: -64.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8471903875877137933}
   - {fileID: 8471903874673817793}
-  - {fileID: 3190576214007650034}
   - {fileID: 8471903875839651259}
-  - {fileID: 8605612288347324897}
-  - {fileID: 1179819837156441777}
-  - {fileID: 6583922562350135886}
-  - {fileID: 9086844955301413865}
-  - {fileID: 8605612288707150263}
   - {fileID: 1179819838864054962}
+  - {fileID: 8605612288707150263}
   - {fileID: 6583922562304628269}
   - {fileID: 9086844955635723030}
+  - {fileID: 8471903874596415714}
+  - {fileID: 8471903876093215455}
+  - {fileID: 8471903875587986803}
+  - {fileID: 1290049692}
+  - {fileID: 8471903875664867226}
+  - {fileID: 3190576214007650034}
+  - {fileID: 8471903876165556127}
   m_Father: {fileID: 8471903874708079329}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4184,9 +4639,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 3.6018147
-  m_Height: 16.66153
+  m_Height: 31.719477
   m_Direction: 1
-  m_Center: {x: 2.3575034, y: -1.3762054, z: 0.94954205}
+  m_Center: {x: 2.357503, y: -1.5666304, z: 0.9495421}
 --- !u!114 &5852120652539936768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,6 +4661,47 @@ MonoBehaviour:
   jumpComplete: 0
   grounded: 0
   playerTransform: {fileID: 8471903875813256814}
+--- !u!23 &1306561696
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8471903875813256812}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8471903875839651256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,7 +4712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8471903875839651259}
   - component: {fileID: 8471903875839651258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorCollider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4231,11 +4727,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903875839651256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.66, z: 0}
+  m_LocalPosition: {x: 0, y: -19.53, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8471903875813256814}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8471903875839651258
 BoxCollider:
@@ -4261,7 +4757,8 @@ GameObject:
   - component: {fileID: 8471903875877137933}
   - component: {fileID: 8471903875877137930}
   - component: {fileID: 8471903875877137931}
-  m_Layer: 0
+  - component: {fileID: 1961245361}
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4280,6 +4777,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8471903875998823830}
+  - {fileID: 8605612288347324897}
+  - {fileID: 1179819837156441777}
+  - {fileID: 6583922562350135886}
+  - {fileID: 9086844955301413865}
   m_Father: {fileID: 8471903875813256814}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4334,6 +4835,29 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903875877137928}
   m_Enabled: 1
+--- !u!114 &1961245361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8471903875877137928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c7e04ea9d121146874a2ad622ebc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRB: {fileID: 8471903875813256815}
+  axes: 0
+  sensitivityX: 2
+  sensitivityY: 2
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60
+  localRotation: {x: 0, y: 0, z: 0}
+  cameraFollowTarget: {fileID: 8471903875813256814}
+  lookSpeed: 0.5
 --- !u!1 &8471903875998823831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4345,13 +4869,13 @@ GameObject:
   - component: {fileID: 8471903875998823830}
   - component: {fileID: 8471903875998823817}
   - component: {fileID: 8471903875998823816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObjectInstantiatorFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8471903875998823830
 Transform:
   m_ObjectHideFlags: 0
@@ -4401,7 +4925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8471903876093215455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MustardSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4416,11 +4940,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903876093215452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3775146, y: -3.3457441, z: -12.440001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8471903876165556127}
-  m_RootOrder: 1
+  m_Father: {fileID: 8471903875813256814}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8471903876165556124
 GameObject:
@@ -4432,7 +4956,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8471903876165556127}
   - component: {fileID: 8471903876165556126}
-  m_Layer: 0
+  - component: {fileID: 1139012858}
+  - component: {fileID: 1139012860}
+  m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4446,17 +4972,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471903876165556124}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3775146, y: 3.3457441, z: -2.5599995}
+  m_LocalRotation: {x: -0.018958844, y: -0.0000000037252907, z: 9.313227e-10, w: 0.9998203}
+  m_LocalPosition: {x: -1.3800006, y: 3.3499985, z: -1.0999908}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8471903874596415714}
-  - {fileID: 8471903876093215455}
-  - {fileID: 8471903875587986803}
-  - {fileID: 8471903875664867226}
-  m_Father: {fileID: 8471903874708079329}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 8471903875813256814}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: -2.173, y: 0, z: 0}
 --- !u!95 &8471903876165556126
 Animator:
   serializedVersion: 3
@@ -4476,3 +4998,64 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1139012858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8471903876165556124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c947a73bf83eca40b9905d923394ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonWeapon: {fileID: 3190576214007650034}
+  foodHolder: {fileID: 0}
+  fireSpeed: 1200
+  weaponsScript: {fileID: 1139012858}
+  outsideFoodContainter: {fileID: 0}
+  burgerCount: 0
+  maxBurgerCount: 10
+  ketchupCount: 0
+  maxKetchupCount: 5
+  mustardCount: 0
+  maxMustardCount: 5
+  shakeCount: 0
+  maxShakeCount: 5
+  burger: {fileID: 8471903875752805237}
+  ketchup: {fileID: 8471903875752805234}
+  mustard: {fileID: 8471903875752805218}
+  shake: {fileID: 8471903875752805190}
+  handBurger: {fileID: 6608485709162446507}
+  handKetchup: {fileID: 1179819838864054974}
+  handMustard: {fileID: 7353267322471591634}
+  handShake: {fileID: 2643990301739621516}
+  bulletSpawn: {fileID: 3190576214007650034}
+  spawningAllowed: 0
+  isBurgering: 0
+  isKetchuping: 0
+  isMustarding: 0
+  isShaking: 0
+  burgerActive: 0
+  ketchupActive: 0
+  mustardActive: 0
+  shakeActive: 0
+  noWeaponSelected: 0
+  hasBurgered: 0
+  weaponAnimator: {fileID: 8471903876165556126}
+  burgerMesh: {fileID: 6608485709162446506}
+--- !u!114 &1139012860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8471903876165556124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49767bd58eb82054394e5bc09852eeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8471903874708079329}
+  ketchupFirePoint: {fileID: 1290049691}

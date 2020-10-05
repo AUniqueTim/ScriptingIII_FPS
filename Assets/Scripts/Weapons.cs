@@ -150,7 +150,7 @@ public class Weapons : MonoBehaviour
             ketchupActive = false;
             mustardActive = false;
             shakeActive = false;
-            Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.position, bulletSpawn.rotation);
+            Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
             
             burgerCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
@@ -184,7 +184,7 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             mustardActive = false;
             shakeActive = false;
-            Rigidbody ketchupCloneRB = Instantiate(ketchup, bulletSpawn.position, bulletSpawn.rotation);
+            Rigidbody ketchupCloneRB = Instantiate(ketchup, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
             
             ketchupCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.ketchup;
@@ -204,7 +204,7 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             ketchupActive = false;
             shakeActive = false;
-            Rigidbody mustardCloneRB = Instantiate(mustard, bulletSpawn.position, bulletSpawn.rotation);
+            Rigidbody mustardCloneRB = Instantiate(mustard, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
           
             mustardCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard;
@@ -224,7 +224,7 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             ketchupActive = false;
             mustardActive = false;
-            Rigidbody shakeCloneRB =  Instantiate(shake, bulletSpawn.position, bulletSpawn.rotation);
+            Rigidbody shakeCloneRB =  Instantiate(shake, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
       
             shakeCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.shake;
