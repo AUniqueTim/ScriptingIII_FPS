@@ -1152,6 +1152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  speed: 0
+  i: 0
 --- !u!114 &5045019220218628647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,8 +1200,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
-  player: {fileID: 0}
-  playerGO: {fileID: 0}
+  player: {fileID: 4156002135924842603, guid: 69091e55c84697b49a9720492840d6b0, type: 3}
+  playerGO: {fileID: 4156002135924842596, guid: 69091e55c84697b49a9720492840d6b0,
+    type: 3}
   lunchLady: {fileID: 1795197330635034578}
   wayPoint1: {fileID: 0}
   wayPoint2: {fileID: 0}

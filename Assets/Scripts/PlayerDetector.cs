@@ -37,29 +37,29 @@ public class PlayerDetector : MonoBehaviour
         Debug.DrawRay(r_detectionDistance.origin, direction * detectionDistance, Color.magenta);
 
 
-        RaycastHit playerInRange;
-        
-        if (Physics.Raycast(r_detectionDistance,out playerInRange, detectionDistance))
+
+        if (Physics.Raycast(r_detectionDistance, out RaycastHit playerInRange, detectionDistance))
         {
             Debug.DrawRay(ray.origin, direction * detectionDistance, Color.cyan);
-           // playerInRange.collider.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            playerInRange.collider.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
         }
-        RaycastHit hitPlayer;
-        if (Physics.Raycast(ray, out hitPlayer, detectionDistance))
+        if (Physics.Raycast(ray, out RaycastHit hitPlayer, detectionDistance))
         {
             if (hitPlayer.collider.gameObject.tag == "Player")
             {
                 gameObject.GetComponent<Renderer>().material.color = Color.red;
-                Debug.Log("YES");
+                Debug.Log("Player was hit.");
+                //Instantiate Rand Range Game Objects Array
+                Debug.DrawRay(ray.origin, Vector3.forward, Color.black);
             }
         }
-        else if (!Physics.Raycast(ray, out RaycastHit hitPlayer02, detectionDistance))
+        else if (Physics.Raycast(ray, out hitPlayer, detectionDistance))
         {
-            if (hitPlayer02.collider.gameObject) {
-                gameObject.GetComponent<Renderer>().material.color = Color.green;
-                Debug.Log("NO");
-            }
-            
+
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+            Debug.Log("Player detector deteced" + hitPlayer.collider.gameObject.name);
+
+
         }
     }
 

@@ -155,7 +155,7 @@ public class Weapons : MonoBehaviour
             shakeActive = false;
             Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
             
-            burgerCloneRB.AddForce(bulletSpawn.transform.position + Vector3.forward * fireSpeed);
+            burgerCloneRB.AddForce(/*bulletSpawn.transform.position +*/ Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
             PlayerManager.instance.burger.SetActive(true);
             burgerCount += 1;
