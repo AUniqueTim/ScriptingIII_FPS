@@ -6,13 +6,13 @@ using UnityEngine.UIElements;
 public class Weapons : MonoBehaviour
 {
     public static Weapons instance;
-    [SerializeField] private Transform firstPersonWeapon;
-    [SerializeField] private Transform foodHolder;
+    //[SerializeField] private Transform firstPersonWeapon;
+    //[SerializeField] private Transform foodHolder;
     [SerializeField] private int fireSpeed;
     
 
     public Weapons weaponsScript;
-    public Transform outsideFoodContainter;
+    //public Transform outsideFoodContainter;
 
     public int burgerCount, maxBurgerCount;
     public int ketchupCount, maxKetchupCount;
@@ -105,6 +105,7 @@ public class Weapons : MonoBehaviour
             ketchupActive = false;
             mustardActive = false;
             shakeActive = false;
+            PlayerManager.instance.currentWeapon = PlayerManager.instance.burger;
         }
         else if (Input.GetKey(KeyCode.Alpha2))
         {
@@ -116,7 +117,7 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             mustardActive = false;
             shakeActive = false;
-
+            PlayerManager.instance.currentWeapon = PlayerManager.instance.ketchup;
         }
         else if (Input.GetKey(KeyCode.Alpha3))
         {
@@ -128,6 +129,7 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             ketchupActive = false;
             shakeActive = false;
+            PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard;
         }
         else if (Input.GetKey(KeyCode.Alpha4))
         {
@@ -139,6 +141,7 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             ketchupActive = false;
             mustardActive = false;
+            PlayerManager.instance.currentWeapon = PlayerManager.instance.shake;
         }
         else if (noWeaponSelected) { burgerActive = false; ketchupActive = false; mustardActive = false; shakeActive = false; }
     }
@@ -150,9 +153,9 @@ public class Weapons : MonoBehaviour
             ketchupActive = false;
             mustardActive = false;
             shakeActive = false;
-            Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
+            Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
             
-            burgerCloneRB.AddForce(Vector3.forward * fireSpeed);
+            burgerCloneRB.AddForce(bulletSpawn.transform.position + Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
             PlayerManager.instance.burger.SetActive(true);
             burgerCount += 1;

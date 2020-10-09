@@ -8,6 +8,7 @@ TagManager:
   - Ketchup
   - Mustard
   - Shake
+  - Enemy
   layers:
   - Default
   - TransparentFX

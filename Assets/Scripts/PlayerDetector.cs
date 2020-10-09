@@ -39,24 +39,27 @@ public class PlayerDetector : MonoBehaviour
 
         RaycastHit playerInRange;
         
-        if (Physics.Raycast(r_detectionDistance,out playerInRange, detectionDistance, layerMask))
+        if (Physics.Raycast(r_detectionDistance,out playerInRange, detectionDistance))
         {
             Debug.DrawRay(ray.origin, direction * detectionDistance, Color.cyan);
-            playerInRange.collider.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+           // playerInRange.collider.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
         }
         RaycastHit hitPlayer;
-        if (Physics.Raycast(ray, out hitPlayer, detectionDistance, layerMask))
+        if (Physics.Raycast(ray, out hitPlayer, detectionDistance))
         {
             if (hitPlayer.collider.gameObject.tag == "Player")
             {
-                hitPlayer.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponent<Renderer>().material.color = Color.red;
                 Debug.Log("YES");
             }
         }
-        else if (!Physics.Raycast(ray, out hitPlayer, detectionDistance, layerMask))
-        { 
-            playerGO.GetComponent<Renderer>().material.color = Color.green;
-            Debug.Log("NO");
+        else if (!Physics.Raycast(ray, out RaycastHit hitPlayer02, detectionDistance))
+        {
+            if (hitPlayer02.collider.gameObject) {
+                gameObject.GetComponent<Renderer>().material.color = Color.green;
+                Debug.Log("NO");
+            }
+            
         }
     }
 
