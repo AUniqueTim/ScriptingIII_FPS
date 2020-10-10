@@ -30,8 +30,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public float fallSpeed = 3;
 
     public Quaternion currentRotation;
-
-   
+    [SerializeField] public int killCount;
+    [SerializeField] public int killThreshold;
 
     public static PlayerManager instance;
     public static PlayerManager Instance
@@ -64,5 +64,15 @@ public class PlayerManager : MonoBehaviour
         if (gameObject.tag == "Shake" && Weapons.instance.shakeCount >= Weapons.instance.maxShakeCount) { Destroy(Weapons.instance.weaponsScript); }
 
         currentRotation = transform.rotation;
+
+        if (health <= 0)
+        {
+            GameOver();
+        }
+    }
+    public void GameOver()
+    {
+        Debug.Log("Game Over.");
+        Destroy(gameObject);
     }
 }

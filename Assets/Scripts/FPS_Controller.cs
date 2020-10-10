@@ -23,12 +23,12 @@ public class FPS_Controller : MonoBehaviour
 
 
 
-    private void Awake()
+    public void Awake()
     {
         jumpAllowed = true;
 
     }
-    private void Update()
+    public void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -82,7 +82,7 @@ public class FPS_Controller : MonoBehaviour
         playerRB.transform.position += Vector3.down * PlayerManager.jumpHeight * PlayerManager.instance.fallSpeed * gravity * Time.deltaTime;
         isJumping = false;
         
-        Debug.Log("Jump cancelled");
+        Debug.Log("Jump cancelled.");
         
     }
     public void OnTriggerEnter(Collider other)
@@ -94,7 +94,14 @@ public class FPS_Controller : MonoBehaviour
 
     public void EnemyHitPlayer()
     {
-
+        PlayerManager.instance.health -= 1;
+    }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            EnemyHitPlayer();
+        }
     }
 
 }

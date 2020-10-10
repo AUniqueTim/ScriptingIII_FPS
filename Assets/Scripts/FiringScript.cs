@@ -10,14 +10,14 @@ public class FiringScript : MonoBehaviour
     public void Awake()
     {
         //Vector3 currentWeaponDirection = PlayerManager.instance.currentWeapon.transform.position;
-        Vector3 currentWeaponDirection = PlayerManager.instance.currentWeapon.transform.position;
+        
 
 
     }
     public void Update()
     {
         //transform.rotation = PlayerManager.instance.currentRotation;
-
+        
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -28,11 +28,13 @@ public class FiringScript : MonoBehaviour
     }
     public void Shoot()
     {
+        Vector3 currentWeaponDirection = PlayerManager.instance.currentWeapon.transform.position;
+
         RaycastHit ketchupHit;
-        if (Physics.Raycast(ketchupFirePoint.transform.position, currentWeaponDirection, out ketchupHit, PlayerManager.instance.weaponRange))
+        if (Physics.Raycast(ketchupFirePoint.transform.position, -currentWeaponDirection, out ketchupHit, PlayerManager.instance.weaponRange))
         {
             Debug.Log(ketchupHit.transform.name);
-            Debug.DrawRay(transform.position, currentWeaponDirection, Color.red);
+            Debug.DrawRay(transform.position, -currentWeaponDirection, Color.red);
 
         }
         

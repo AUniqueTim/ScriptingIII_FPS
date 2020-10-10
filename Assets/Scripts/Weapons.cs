@@ -71,7 +71,7 @@ public class Weapons : MonoBehaviour
         instance = this;
         weaponsScript = GetComponent<Weapons>();
         weaponAnimator = GetComponent<Animator>();
-        burgerMesh = PlayerManager.instance.burgerHand.GetComponent<MeshRenderer>();
+        burgerMesh = handBurger.GetComponent<MeshRenderer>();
     }
 
    
@@ -155,7 +155,7 @@ public class Weapons : MonoBehaviour
             shakeActive = false;
             Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
             
-            burgerCloneRB.AddForce(/*bulletSpawn.transform.position +*/ Vector3.forward * fireSpeed);
+            burgerCloneRB.AddForce(bulletSpawn.transform.position * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
             PlayerManager.instance.burger.SetActive(true);
             burgerCount += 1;
