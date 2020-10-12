@@ -9,7 +9,8 @@ public class Weapons : MonoBehaviour
     //[SerializeField] private Transform firstPersonWeapon;
     //[SerializeField] private Transform foodHolder;
     [SerializeField] private int fireSpeed;
-    
+
+    [SerializeField] private Camera camera;
 
     public Weapons weaponsScript;
     //public Transform outsideFoodContainter;
@@ -40,11 +41,14 @@ public class Weapons : MonoBehaviour
     public bool mustardActive;
     public bool shakeActive;
     public bool noWeaponSelected;
+
     public bool hasBurgered;
+    public bool hasKetchuped;
 
     public Animator weaponAnimator;
 
     public MeshRenderer burgerMesh;
+    public MeshRenderer ketchupMesh;
 
     private ForceMode force;
 
@@ -156,8 +160,8 @@ public class Weapons : MonoBehaviour
             mustardActive = false;
             shakeActive = false;
             Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-            burgerCloneRB.MoveRotation(bulletSpawn.transform.rotation);
-            burgerCloneRB.AddForce(bulletSpawn.transform.position + Vector3.forward * fireSpeed);
+            //burgerCloneRB.MoveRotation(bulletSpawn.transform.rotation);
+            burgerCloneRB.AddForce(camera.transform.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
             PlayerManager.instance.burger.SetActive(true);
             burgerCount += 1;
@@ -189,17 +193,17 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             mustardActive = false;
             shakeActive = false;
-            Rigidbody ketchupCloneRB = Instantiate(ketchup, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
+            //Rigidbody ketchupCloneRB = Instantiate(ketchup, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
             
-            ketchupCloneRB.AddForce(Vector3.forward * fireSpeed);
+            //ketchupCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.ketchup;
             PlayerManager.instance.ketchup.SetActive(true);
-            ketchupCount += 1;
+            //ketchupCount += 1;
             isKetchuping = true;
             isBurgering = false;
             isMustarding = false;
             isShaking = false;
-            Debug.Log("Ketchup instantiated. Total ketchups: " + ketchupCount);
+            //Debug.Log("Ketchup instantiated. Total ketchups: " + ketchupCount);
         }
         
         if (Input.GetKeyDown(KeyCode.Mouse0) && mustardActive == true)
@@ -209,17 +213,17 @@ public class Weapons : MonoBehaviour
             burgerActive = false;
             ketchupActive = false;
             shakeActive = false;
-            Rigidbody mustardCloneRB = Instantiate(mustard, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
+            //Rigidbody mustardCloneRB = Instantiate(mustard, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
           
-            mustardCloneRB.AddForce(Vector3.forward * fireSpeed);
+            //mustardCloneRB.AddForce(Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard;
             PlayerManager.instance.mustard.SetActive(true);
-            mustardCount += 1;
+            //mustardCount += 1;
             isMustarding = true;
             isBurgering = false;
             isKetchuping = false;
             isShaking = false;
-            Debug.Log("Mustard instantiated. Total mustards: " + mustardCount);
+            //Debug.Log("Mustard instantiated. Total mustards: " + mustardCount);
         }
       
         if (Input.GetKeyDown(KeyCode.Mouse1) && shakeActive == true)
@@ -231,7 +235,7 @@ public class Weapons : MonoBehaviour
             mustardActive = false;
             Rigidbody shakeCloneRB =  Instantiate(shake, bulletSpawn.gameObject.transform.position, bulletSpawn.gameObject.transform.rotation);
       
-            shakeCloneRB.AddForce(Vector3.forward * fireSpeed);
+            shakeCloneRB.AddForce(-camera.transform.position * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.shake;
             PlayerManager.instance.shake.SetActive(true);
             shakeCount += 1;
@@ -266,9 +270,6 @@ public class Weapons : MonoBehaviour
             isBurgering = false;
         }
     }
-    
-       
-    
     public void StopBurgering()
     {
         if (hasBurgered)
@@ -276,20 +277,22 @@ public class Weapons : MonoBehaviour
             weaponAnimator.SetBool("isBurgering", false);
             burgerMesh.gameObject.SetActive(false);
         }
-
-        
         Debug.Log("Stopped burgering.");
-        
-
-       
     }
     public void AnimateKetchup()
     {
-        weaponAnimator.SetBool("isKetchuping", true);
+    weaponAnimator.SetBool("isKetchuping", true);
+    isKetchuping = true;
+    Debug.Log("Ketchuping.");
     }
     public void StopKetchuping()
     {
-        weaponAnimator.SetBool("isKetchuping", false);
+        if (isKetchuping)
+        {
+            weaponAnimator.SetBool("isKetchuping", false);
+            ketchupMesh.gameObject.SetActive(false);
+        }
+        Debug.Log("Stopped ketchuping.");
     }
     public void AnimateMustard()
     {
