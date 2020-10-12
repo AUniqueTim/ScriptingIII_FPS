@@ -46,6 +46,8 @@ public class Weapons : MonoBehaviour
 
     public MeshRenderer burgerMesh;
 
+    private ForceMode force;
+
     //START SINGLETON
     public static Weapons Instance
     {
@@ -154,8 +156,8 @@ public class Weapons : MonoBehaviour
             mustardActive = false;
             shakeActive = false;
             Rigidbody burgerCloneRB = Instantiate(burger, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-            
-            burgerCloneRB.AddForce(bulletSpawn.transform.position * fireSpeed);
+            burgerCloneRB.MoveRotation(bulletSpawn.transform.rotation);
+            burgerCloneRB.AddForce(bulletSpawn.transform.position + Vector3.forward * fireSpeed);
             PlayerManager.instance.currentWeapon = PlayerManager.instance.burgerHand;
             PlayerManager.instance.burger.SetActive(true);
             burgerCount += 1;
