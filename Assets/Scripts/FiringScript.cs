@@ -54,10 +54,10 @@ public class FiringScript : MonoBehaviour
                 Debug.Log("Ketchup PE active.");
                 //Ray ketchupRay = new Ray(ketchupFirePoint.transform.position.normalized, ketchupFirePoint.transform.position);
                 RaycastHit ketchupHit;
-                if (Physics.Raycast(camera.transform.position,  camera.transform.position, out ketchupHit))
+                if (Physics.Raycast(ketchupFirePoint.transform.position,  ketchupFirePoint.transform.forward * PlayerManager.instance.weaponRange, out ketchupHit))
                 {
                     Debug.Log(ketchupHit.transform.name);
-                    Debug.DrawRay(camera.transform.position,  camera.transform.position, Color.red);
+                    Debug.DrawRay(ketchupFirePoint.transform.position, ketchupFirePoint.transform.forward * PlayerManager.instance.weaponRange, Color.red);
                     if (ketchupHit.collider.tag == "Enemy") { EnemyManager.instance.enemyHealth -= 1; }
                     ketchupHit.collider.GetComponent<MeshRenderer>().material.color = Color.red;
                 }
@@ -78,11 +78,11 @@ public class FiringScript : MonoBehaviour
 
                 //Ray mustardRay = new Ray(mustardFirePoint.transform.position, camera.transform.position);
                 RaycastHit mustardHit;
-                if (Physics.Raycast(camera.transform.position, camera.transform.position, out mustardHit))
+                if (Physics.Raycast(mustardFirePoint.transform.position, mustardFirePoint.transform.forward * PlayerManager.instance.weaponRange, out mustardHit))
                 {
                     Debug.Log(mustardHit.transform.name);
                     //Debug.Log(mustardHit.point, mustardFirePoint);
-                    Debug.DrawRay(camera.transform.position, camera.transform.position, Color.yellow);
+                    Debug.DrawRay(mustardFirePoint.transform.position, mustardFirePoint.transform.forward * PlayerManager.instance.weaponRange, Color.yellow);
                     //Debug.DrawLine(mustardFirePoint.transform.position, -mustardFirePoint.transform.position, Color.yellow);
                     if (mustardHit.collider.tag == "Enemy") { EnemyManager.instance.enemyHealth -= 1; }
                     mustardHit.collider.GetComponent<MeshRenderer>().material.color = Color.yellow;

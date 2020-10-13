@@ -1,5 +1,99 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1660568203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660568206}
+  - component: {fileID: 1660568205}
+  - component: {fileID: 1660568204}
+  - component: {fileID: 5628730500353751654}
+  m_Layer: 0
+  m_Name: Icosphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1660568206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660568203}
+  m_LocalRotation: {x: -0, y: -0.005576287, z: -0, w: 0.9999845}
+  m_LocalPosition: {x: -27.161299, y: -16.861729, z: -4.9472294}
+  m_LocalScale: {x: 1.317734, y: 1.3177345, z: 1.317734}
+  m_Children: []
+  m_Father: {fileID: 216024863730100846}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1660568205
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660568203}
+  m_Mesh: {fileID: 0}
+--- !u!23 &1660568204
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660568203}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5628730500353751654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660568203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1563669264643684048
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +107,7 @@ GameObject:
   - component: {fileID: 6966368568639596843}
   - component: {fileID: 2451596776645458042}
   - component: {fileID: 344534926}
+  - component: {fileID: 4861516536248505888}
   m_Layer: 0
   m_Name: BottomBun
   m_TagString: Untagged
@@ -112,6 +207,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &4861516536248505888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563669264643684048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2186519056412119217
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +232,7 @@ GameObject:
   - component: {fileID: 5015854966532624972}
   - component: {fileID: 7135243410342332182}
   - component: {fileID: 876158176}
+  - component: {fileID: 6130704049040290265}
   m_Layer: 0
   m_Name: Lettuce
   m_TagString: Untagged
@@ -224,6 +332,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &6130704049040290265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2186519056412119217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2265806496930550370
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +357,7 @@ GameObject:
   - component: {fileID: 857472003802963273}
   - component: {fileID: 5672915843703321561}
   - component: {fileID: 2102161572}
+  - component: {fileID: 1885848611820935800}
   m_Layer: 0
   m_Name: Cheese
   m_TagString: Untagged
@@ -336,6 +457,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1885848611820935800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265806496930550370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3324836357275637106
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216024863730100846}
   - component: {fileID: 1835362554}
+  - component: {fileID: -2533811614974559575}
   m_Layer: 0
   m_Name: Burger_weapon
   m_TagString: Burger
@@ -371,6 +505,7 @@ Transform:
   - {fileID: 2926074816574159716}
   - {fileID: 6790875290902376649}
   - {fileID: 2172155013792411918}
+  - {fileID: 1660568206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0.63900006, z: 0}
@@ -390,6 +525,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &-2533811614974559575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324836357275637106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3489150901753886625
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +550,7 @@ GameObject:
   - component: {fileID: 1147245133505873996}
   - component: {fileID: 4652907475719460136}
   - component: {fileID: 1710316771}
+  - component: {fileID: 5531361229271584489}
   m_Layer: 0
   m_Name: Meat
   m_TagString: Untagged
@@ -502,6 +650,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &5531361229271584489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3489150901753886625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3580634717680901584
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +673,7 @@ GameObject:
   - component: {fileID: 6790875290902376649}
   - component: {fileID: 203519163948461498}
   - component: {fileID: 1907715934}
+  - component: {fileID: 4965250638506160356}
   m_Layer: 0
   m_Name: BurgerLight
   m_TagString: Untagged
@@ -611,6 +772,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &4965250638506160356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580634717680901584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6794315572257183945
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +797,7 @@ GameObject:
   - component: {fileID: 6663531833305781463}
   - component: {fileID: 8146808240119491355}
   - component: {fileID: 940105159}
+  - component: {fileID: 4262223041606804759}
   m_Layer: 0
   m_Name: TopBun
   m_TagString: Untagged
@@ -723,6 +897,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &4262223041606804759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794315572257183945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9130383744185984933
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +922,7 @@ GameObject:
   - component: {fileID: 4806167236087657964}
   - component: {fileID: 6369354912941909260}
   - component: {fileID: 24093379}
+  - component: {fileID: 3786964136085363190}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: Untagged
@@ -835,3 +1022,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &3786964136085363190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130383744185984933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d38f13d99f15042a0b895dec9b8a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

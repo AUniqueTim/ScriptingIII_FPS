@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 1240628259078373624}
   - component: {fileID: 7777087427530280906}
   - component: {fileID: 1795658467}
+  - component: {fileID: 1611048482515557660}
   m_Layer: 0
   m_Name: Shake_weapon
   m_TagString: Shake
@@ -311,3 +312,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1611048482515557660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846631758438491606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8d9418df7f7754e8c4849ab50def9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

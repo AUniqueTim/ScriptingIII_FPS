@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4364029075019731053}
   - component: {fileID: 4370768277153141194}
   - component: {fileID: 653104693}
+  - component: {fileID: -7306518411978243935}
   m_Layer: 0
   m_Name: MustardBottle_weapon
   m_TagString: Mustard
@@ -114,6 +115,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &-7306518411978243935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413622428249233382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c498605895f7f42928f47c64f0bdc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1981475721081646402
 GameObject:
   m_ObjectHideFlags: 0
