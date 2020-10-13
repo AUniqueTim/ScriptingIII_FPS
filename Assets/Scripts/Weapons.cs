@@ -6,15 +6,13 @@ using UnityEngine.UIElements;
 public class Weapons : MonoBehaviour
 {
     public static Weapons instance;
-    //[SerializeField] private Transform firstPersonWeapon;
-    //[SerializeField] private Transform foodHolder;
-    [SerializeField] private readonly int burgerFireSpeed;
-    [SerializeField] private readonly int shakeFireSpeed;
+
+    [SerializeField] private int burgerFireSpeed;
+    [SerializeField] private int shakeFireSpeed;
 
     [SerializeField] private new readonly Camera camera;
 
     public Weapons weaponsScript;
-    //public Transform outsideFoodContainter;
 
     public int burgerCount, maxBurgerCount;
     public int ketchupCount, maxKetchupCount;
@@ -25,7 +23,6 @@ public class Weapons : MonoBehaviour
     public Rigidbody ketchup;
     public Rigidbody mustard;
     public Rigidbody shake;
-    
 
     public GameObject handBurger;
     public GameObject handKetchup;
@@ -34,10 +31,12 @@ public class Weapons : MonoBehaviour
 
     public Transform bulletSpawn;
     public bool spawningAllowed;
+
     public bool isBurgering;
     public bool isKetchuping;
     public bool isMustarding;
     public bool isShaking;
+
     public bool burgerActive;
     public bool ketchupActive;
     public bool mustardActive;
@@ -85,6 +84,7 @@ public class Weapons : MonoBehaviour
         ketchupMesh = handKetchup.GetComponent<MeshRenderer>();
         mustardMesh = handMustard.GetComponent<MeshRenderer>();
         shakeMesh = handShake.GetComponent<MeshRenderer>();
+        spawningAllowed = true;
     }
 
    
@@ -158,7 +158,7 @@ public class Weapons : MonoBehaviour
     public void InstantiateFood()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && burgerActive == true /*&& WeaponPickUp.burgerClicked == true*/)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && burgerActive == true && BurgerPickUp.burgerClicked == true)
         {
             ketchupActive = false;
             mustardActive = false;

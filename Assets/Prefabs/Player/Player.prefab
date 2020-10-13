@@ -793,7 +793,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burgerFireSpeed: 0
   shakeFireSpeed: 0
-  camera: {fileID: 0}
   weaponsScript: {fileID: 5494156645053138650}
   burgerCount: 0
   maxBurgerCount: 5
@@ -824,9 +823,13 @@ MonoBehaviour:
   noWeaponSelected: 0
   hasBurgered: 0
   hasKetchuped: 0
+  hasMustarded: 0
+  hasShaked: 0
   weaponAnimator: {fileID: 5494156645053138648}
   burgerMesh: {fileID: 1695927285472091168}
   ketchupMesh: {fileID: 0}
+  mustardMesh: {fileID: 0}
+  shakeMesh: {fileID: 0}
 --- !u!1 &1778592934174055038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1904,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burgerFireSpeed: 0
   shakeFireSpeed: 0
-  camera: {fileID: 0}
   weaponsScript: {fileID: 5494156645726038383}
   burgerCount: 0
   maxBurgerCount: 5
@@ -1932,9 +1934,13 @@ MonoBehaviour:
   noWeaponSelected: 0
   hasBurgered: 0
   hasKetchuped: 0
+  hasMustarded: 0
+  hasShaked: 0
   weaponAnimator: {fileID: 5494156645726038380}
   burgerMesh: {fileID: 377511537454517203}
   ketchupMesh: {fileID: 0}
+  mustardMesh: {fileID: 0}
+  shakeMesh: {fileID: 0}
 --- !u!1 &3179067469474496469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,9 +2848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burgerFireSpeed: 1000
-  shakeFireSpeed: 10
-  camera: {fileID: 4156002135265430656}
-  weaponsScript: {fileID: 0}
+  shakeFireSpeed: 1000
+  weaponsScript: {fileID: 1901947201}
   burgerCount: 0
   maxBurgerCount: 100
   ketchupCount: 0
@@ -2874,9 +2879,13 @@ MonoBehaviour:
   noWeaponSelected: 0
   hasBurgered: 0
   hasKetchuped: 0
+  hasMustarded: 0
+  hasShaked: 0
   weaponAnimator: {fileID: 4156002135507596564}
   burgerMesh: {fileID: 1695927285472091168}
   ketchupMesh: {fileID: 6656502459765684278}
+  mustardMesh: {fileID: 377511537454517203}
+  shakeMesh: {fileID: 2925806179873250088}
 --- !u!114 &1901947202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3034,7 +3043,8 @@ MonoBehaviour:
   weaponRange: 200
   health: 100
   lives: 0
-  ammo: 0
+  ketchupAmmo: 0
+  mustardAmmo: 0
   jumpSpeed: 3
   fallSpeed: 0.3
   currentRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -3825,7 +3835,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burgerFireSpeed: 0
   shakeFireSpeed: 0
-  camera: {fileID: 0}
   weaponsScript: {fileID: 5494156646179394350}
   burgerCount: 0
   maxBurgerCount: 5
@@ -3856,9 +3865,13 @@ MonoBehaviour:
   noWeaponSelected: 0
   hasBurgered: 0
   hasKetchuped: 0
+  hasMustarded: 0
+  hasShaked: 0
   weaponAnimator: {fileID: 5494156646179394345}
   burgerMesh: {fileID: 6656502459765684278}
   ketchupMesh: {fileID: 0}
+  mustardMesh: {fileID: 0}
+  shakeMesh: {fileID: 0}
 --- !u!1 &6656502459984643722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,7 +4766,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burgerFireSpeed: 0
   shakeFireSpeed: 0
-  camera: {fileID: 0}
   weaponsScript: {fileID: 5494156645779757637}
   burgerCount: 0
   maxBurgerCount: 5
@@ -4784,9 +4796,13 @@ MonoBehaviour:
   noWeaponSelected: 0
   hasBurgered: 0
   hasKetchuped: 0
+  hasMustarded: 0
+  hasShaked: 0
   weaponAnimator: {fileID: 5494156645779757639}
   burgerMesh: {fileID: 2925806179873250088}
   ketchupMesh: {fileID: 0}
+  mustardMesh: {fileID: 0}
+  shakeMesh: {fileID: 0}
 --- !u!1 &7534097180887488249
 GameObject:
   m_ObjectHideFlags: 0
