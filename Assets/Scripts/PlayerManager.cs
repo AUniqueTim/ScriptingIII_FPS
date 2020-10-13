@@ -16,11 +16,13 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject[] weapons;
     public GameObject currentWeapon;
+
     public float weaponDamage;
     public float weaponRange;
-    public float health;
-    public float lives;
-    public float ammo;
+    public int health;
+    public int lives;
+    public int ketchupAmmo;
+    public int mustardAmmo;
 
     [SerializeField] public static float playerSpeed = 20f;
     [SerializeField] public static float runSpeed = 40f;
@@ -30,6 +32,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public float fallSpeed = 3;
 
     public Quaternion currentRotation;
+
     [SerializeField] public int killCount;
     [SerializeField] public int killThreshold;
 
@@ -54,10 +57,15 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-       
+        //ketchupAmmo = 100;
+        //mustardAmmo = 100;
+
     }
     public void Update()
     {
+        if (ketchupAmmo < 0) { ketchupAmmo = 0; }
+        if (mustardAmmo < 0) { mustardAmmo = 0; }
+
         if (gameObject.tag == "Burger" && Weapons.instance.burgerCount >= Weapons.instance.maxBurgerCount) { Destroy(Weapons.instance.weaponsScript); }
         if (gameObject.tag == "Ketchup" && Weapons.instance.ketchupCount >= Weapons.instance.maxKetchupCount) { Destroy(Weapons.instance.weaponsScript); }
         if (gameObject.tag == "Mustard" && Weapons.instance.mustardCount >= Weapons.instance.maxMustardCount) { Destroy(Weapons.instance.weaponsScript); }

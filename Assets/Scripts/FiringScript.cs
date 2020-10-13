@@ -10,7 +10,7 @@ public class FiringScript : MonoBehaviour
     private Vector3 currentWeaponDirection;
     [SerializeField] private ParticleSystem ketchupSpray;
     [SerializeField] private ParticleSystem mustardSpray;
-
+    [SerializeField] private Camera camera;
     public bool isFiring;
     public void Awake()
     {
@@ -52,13 +52,14 @@ public class FiringScript : MonoBehaviour
                 //mustardSpray.Stop();
                 ketchupSpray.Play();
                 Debug.Log("Ketchup PE active.");
-
+                //Ray ketchupRay = new Ray(ketchupFirePoint.transform.position.normalized, ketchupFirePoint.transform.position);
                 RaycastHit ketchupHit;
-                if (Physics.Raycast(ketchupFirePoint.transform.position, ketchupFirePoint.transform.position, out ketchupHit, PlayerManager.instance.weaponRange))
+                if (Physics.Raycast(camera.transform.position,  camera.transform.position, out ketchupHit))
                 {
                     Debug.Log(ketchupHit.transform.name);
-                    Debug.DrawRay(ketchupFirePoint.transform.position, ketchupFirePoint.transform.position, Color.red);
+                    Debug.DrawRay(camera.transform.position,  camera.transform.position, Color.red);
                     if (ketchupHit.collider.tag == "Enemy") { EnemyManager.instance.enemyHealth -= 1; }
+                    ketchupHit.collider.GetComponent<MeshRenderer>().material.color = Color.red;
                 }
                 if (!PlayerManager.instance.ketchupHand.activeInHierarchy) { ketchupSpray.Stop(); ; Debug.Log("Ketchup PE Stopped."); }
             }
@@ -75,16 +76,18 @@ public class FiringScript : MonoBehaviour
                 mustardSpray.Play();
                 Debug.Log("Mustard PE active.");
 
-                Ray mustardRay = new Ray(mustardFirePoint.transform.position, Vector3.forward);
+                //Ray mustardRay = new Ray(mustardFirePoint.transform.position, camera.transform.position);
                 RaycastHit mustardHit;
-                if (Physics.Raycast(mustardFirePoint.transform.position, mustardFirePoint.transform.position, out mustardHit, PlayerManager.instance.weaponRange, 0,0))
+                if (Physics.Raycast(camera.transform.position, camera.transform.position, out mustardHit))
                 {
                     Debug.Log(mustardHit.transform.name);
-                    Debug.Log(mustardHit.point, mustardFirePoint);
-                    Debug.DrawRay(mustardFirePoint.transform.position, mustardFirePoint.transform.position, Color.yellow);
+                    //Debug.Log(mustardHit.point, mustardFirePoint);
+                    Debug.DrawRay(camera.transform.position, camera.transform.position, Color.yellow);
                     //Debug.DrawLine(mustardFirePoint.transform.position, -mustardFirePoint.transform.position, Color.yellow);
                     if (mustardHit.collider.tag == "Enemy") { EnemyManager.instance.enemyHealth -= 1; }
-                    
+                    mustardHit.collider.GetComponent<MeshRenderer>().material.color = Color.yellow;
+
+
                 }
                 if (!PlayerManager.instance.mustardHand.activeInHierarchy) { mustardSpray.Stop(); Debug.Log("Mustard PE Stopped."); }
             }
