@@ -61,7 +61,7 @@ public class MouseLook : MonoBehaviour
             Quaternion yQuaternion = Quaternion.AngleAxis(rotationY, -Vector3.right);
 
 
-            playerRB.rotation = originalRotation * xQuaternion * yQuaternion;
+            playerRB.rotation = originalRotation * xQuaternion;
 
 
         }

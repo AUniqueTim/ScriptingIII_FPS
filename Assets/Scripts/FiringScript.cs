@@ -6,23 +6,16 @@ public class FiringScript : MonoBehaviour
     public Transform player;
     public GameObject ketchupFirePoint;
     public GameObject mustardFirePoint;
-    //public Transform weaponDirection;
     private Vector3 currentWeaponDirection;
     [SerializeField] private ParticleSystem ketchupSpray;
     [SerializeField] private ParticleSystem mustardSpray;
-    [SerializeField] private Camera camera;
     public bool isFiring;
-    public void Awake()
+    private void Awake()
     {
-        //Vector3 currentWeaponDirection = PlayerManager.instance.currentWeapon.transform.position;
-        
-
-
+        currentWeaponDirection = player.gameObject.transform.position;
     }
     public void Update()
     {
-        //transform.rotation = PlayerManager.instance.currentRotation;
-        
         if (Input.GetButton("Fire1"))
         {
             isFiring = true;
@@ -34,25 +27,20 @@ public class FiringScript : MonoBehaviour
             ketchupSpray.gameObject.SetActive(false);
             mustardSpray.gameObject.SetActive(false);
         }
-      
-       
+
         Debug.DrawRay(transform.position, currentWeaponDirection, Color.green);
     }
     public void Shoot()
     {
-        
         if (PlayerManager.instance.currentWeapon = PlayerManager.instance.ketchup)
         {
             if (isFiring)
             {
-                //Vector3 currentWeaponDirection = ketchupFirePoint.transform.position;
-                //Quaternion currentWeaponRotation = ketchupFirePoint.transform.rotation;
-
                 ketchupSpray.gameObject.SetActive(true);
                 //mustardSpray.Stop();
                 ketchupSpray.Play();
                 Debug.Log("Ketchup PE active.");
-                //Ray ketchupRay = new Ray(ketchupFirePoint.transform.position.normalized, ketchupFirePoint.transform.position);
+                
                 RaycastHit ketchupHit;
                 if (Physics.Raycast(ketchupFirePoint.transform.position,  ketchupFirePoint.transform.forward * PlayerManager.instance.weaponRange, out ketchupHit))
                 {
@@ -64,26 +52,20 @@ public class FiringScript : MonoBehaviour
                 if (!PlayerManager.instance.ketchupHand.activeInHierarchy) { ketchupSpray.Stop(); ; Debug.Log("Ketchup PE Stopped."); }
             }
         }
-        if (PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard)
+        else if (PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard)
         {
             if (isFiring)
             {
-                //Vector3 currentWeaponDirection = mustardFirePoint.transform.position;
-                //Quaternion currentWeaponRotation = mustardFirePoint.transform.rotation;
-
                 mustardSpray.gameObject.SetActive(true);
                 //ketchupSpray.Stop();
                 mustardSpray.Play();
                 Debug.Log("Mustard PE active.");
-
-                //Ray mustardRay = new Ray(mustardFirePoint.transform.position, camera.transform.position);
                 RaycastHit mustardHit;
                 if (Physics.Raycast(mustardFirePoint.transform.position, mustardFirePoint.transform.forward * PlayerManager.instance.weaponRange, out mustardHit))
                 {
                     Debug.Log(mustardHit.transform.name);
                     //Debug.Log(mustardHit.point, mustardFirePoint);
                     Debug.DrawRay(mustardFirePoint.transform.position, mustardFirePoint.transform.forward * PlayerManager.instance.weaponRange, Color.yellow);
-                    //Debug.DrawLine(mustardFirePoint.transform.position, -mustardFirePoint.transform.position, Color.yellow);
                     if (mustardHit.collider.tag == "Enemy") { EnemyManager.instance.enemyHealth -= 1; }
                     mustardHit.collider.GetComponent<MeshRenderer>().material.color = Color.yellow;
 
@@ -92,7 +74,5 @@ public class FiringScript : MonoBehaviour
                 if (!PlayerManager.instance.mustardHand.activeInHierarchy) { mustardSpray.Stop(); Debug.Log("Mustard PE Stopped."); }
             }
         }
-        
-        
     }
 }

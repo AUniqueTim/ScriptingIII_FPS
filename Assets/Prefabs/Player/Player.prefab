@@ -2745,6 +2745,7 @@ GameObject:
   - component: {fileID: 4156002135265430657}
   - component: {fileID: 5494156646085924923}
   - component: {fileID: 5494156647062406928}
+  - component: {fileID: 1349140490}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2852,7 +2853,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4156002135265430658}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9cbe78aa7e47ec4e95227cf1fa79d14, type: 3}
   m_Name: 
@@ -2860,6 +2861,25 @@ MonoBehaviour:
   target: {fileID: 4156002135924842603}
   speed: 0
   i: 0
+--- !u!114 &1349140490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156002135265430658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49767bd58eb82054394e5bc09852eeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4156002135924842603}
+  ketchupFirePoint: {fileID: 5494156645146507793}
+  mustardFirePoint: {fileID: 1778592934174055038}
+  ketchupSpray: {fileID: 371088054}
+  mustardSpray: {fileID: 1374675333}
+  camera: {fileID: 4156002135265430656}
+  isFiring: 0
 --- !u!1 &4156002135485522006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2921,6 @@ GameObject:
   - component: {fileID: 4156002135507596565}
   - component: {fileID: 4156002135507596564}
   - component: {fileID: 1901947201}
-  - component: {fileID: 1901947202}
   m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
@@ -2993,25 +3012,6 @@ MonoBehaviour:
   ketchupMesh: {fileID: 6656502459765684278}
   mustardMesh: {fileID: 377511537454517203}
   shakeMesh: {fileID: 2925806179873250088}
---- !u!114 &1901947202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4156002135507596566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49767bd58eb82054394e5bc09852eeff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4156002135924842603}
-  ketchupFirePoint: {fileID: 5494156645146507793}
-  mustardFirePoint: {fileID: 1778592934174055038}
-  ketchupSpray: {fileID: 371088054}
-  mustardSpray: {fileID: 1374675333}
-  camera: {fileID: 4156002135265430656}
-  isFiring: 0
 --- !u!1 &4156002135852745134
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3535,7 @@ GameObject:
   - component: {fileID: 5494156645485002855}
   - component: {fileID: 5494156645485002854}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: PlayerHead
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5422,15 +5422,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34618625fcadcb14aa44ed237a744d4c, type: 3}
---- !u!4 &371088055 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1590536090304394327, guid: 34618625fcadcb14aa44ed237a744d4c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1590536090674425568}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &371088054 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1590536090304394326, guid: 34618625fcadcb14aa44ed237a744d4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1590536090674425568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &371088055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1590536090304394327, guid: 34618625fcadcb14aa44ed237a744d4c,
     type: 3}
   m_PrefabInstance: {fileID: 1590536090674425568}
   m_PrefabAsset: {fileID: 0}

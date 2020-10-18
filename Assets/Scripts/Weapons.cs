@@ -10,7 +10,7 @@ public class Weapons : MonoBehaviour
     [SerializeField] private int burgerFireSpeed;
     [SerializeField] private int shakeFireSpeed;
 
-    [SerializeField] private new readonly Camera camera;
+    //[SerializeField] private new readonly Camera camera;
 
     public Weapons weaponsScript;
 
@@ -158,7 +158,7 @@ public class Weapons : MonoBehaviour
     public void InstantiateFood()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && burgerActive == true && BurgerPickUp.burgerClicked == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && burgerActive == true)
         {
             ketchupActive = false;
             mustardActive = false;
@@ -176,6 +176,8 @@ public class Weapons : MonoBehaviour
             isShaking = false;
             BurgerPickUp.burgerClicked = false;
             Debug.Log("Burger instantiated. Total burgers: " + burgerCount);
+            hasBurgered = true;
+            
 
 
             if (burgerActive && isBurgering)
@@ -210,12 +212,14 @@ public class Weapons : MonoBehaviour
             isMustarding = false;
             isShaking = false;
             KetchupPickUp.ketchupClicked = false;
-            //Debug.Log("Ketchup instantiated. Total ketchups: " + ketchupCount);
+            Debug.Log("Ketchup instantiated. Total ketchups: " + ketchupCount);
             PlayerManager.instance.ketchupAmmo--;
+            hasKetchuped = true;
 
             if (ketchupActive && isKetchuping)
             {
                 AnimateKetchup();
+                ketchupCount++;
             }
             else if (!ketchupActive)
             {
@@ -241,8 +245,10 @@ public class Weapons : MonoBehaviour
             isKetchuping = false;
             isShaking = false;
             MustardPickUp.mustardClicked = false;
-            //Debug.Log("Mustard instantiated. Total mustards: " + mustardCount);
+            Debug.Log("Mustard instantiated. Total mustards: " + mustardCount);
             PlayerManager.instance.mustardAmmo--;
+            hasMustarded = true;
+
 
             if (mustardActive && isMustarding)
             {
@@ -273,6 +279,7 @@ public class Weapons : MonoBehaviour
             isKetchuping = false;
             ShakePickUp.shakeClicked = false;
             Debug.Log("Shake instantiated. Total shakes: " + shakeCount);
+            hasShaked = true;
 
             if (shakeActive && isShaking)
             {
@@ -290,23 +297,21 @@ public class Weapons : MonoBehaviour
     public void DestroyFood()
     {
 
-        if (burgerCount >= maxBurgerCount) if (PlayerManager.instance.burger.tag == "Burger") { Destroy(PlayerManager.instance.burger); }
-        if (ketchupCount >= maxKetchupCount) if (PlayerManager.instance.ketchup.tag == "Ketchup") { Destroy(PlayerManager.instance.ketchup); }
-        if (mustardCount >= maxMustardCount) if (PlayerManager.instance.mustard.tag == "Mustard") { Destroy(PlayerManager.instance.mustard); }
-        if (shakeCount >= maxShakeCount) if (PlayerManager.instance.shake.tag == "Shake") { Destroy(PlayerManager.instance.shake); }
+        if (burgerCount >= maxBurgerCount) if (PlayerManager.instance.burger.tag == "Burger") { Destroy(PlayerManager.instance.burger.gameObject); }
+        if (ketchupCount >= maxKetchupCount) if (PlayerManager.instance.ketchup.tag == "Ketchup") { Destroy(PlayerManager.instance.ketchup.gameObject); }
+        if (mustardCount >= maxMustardCount) if (PlayerManager.instance.mustard.tag == "Mustard") { Destroy(PlayerManager.instance.mustard.gameObject); }
+        if (shakeCount >= maxShakeCount) if (PlayerManager.instance.shake.tag == "Shake") { Destroy(PlayerManager.instance.shake.gameObject); }
     }
 
     public void AnimateBurger()
     {
     //weaponAnimator.SetBool("isBurgering", true);
-    hasBurgered = true;
+    //hasBurgered = true;
+    burgerMesh.gameObject.SetActive(true);
     Debug.Log("Burgering.");
-
-        if (hasBurgered)
-        {
-            StopBurgering();
-            isBurgering = false;
-        }
+    StopBurgering();
+    isBurgering = false;
+       
     }
     public void StopBurgering()
     {
@@ -320,7 +325,7 @@ public class Weapons : MonoBehaviour
     public void AnimateKetchup()
     {
     weaponAnimator.SetBool("isKetchuping", true);
-    hasKetchuped = true;
+    //hasKetchuped = true;
     Debug.Log("Ketchuping.");
         if (hasKetchuped)
         {
@@ -340,7 +345,7 @@ public class Weapons : MonoBehaviour
     public void AnimateMustard()
     {
     weaponAnimator.SetBool("isMustarding", true);
-    hasMustarded = true;
+    //hasMustarded = true;
     Debug.Log("Mustarding.");
         if (hasMustarded)
         {
@@ -360,7 +365,7 @@ public class Weapons : MonoBehaviour
     public void AnimateShake()
     {
     weaponAnimator.SetBool("isShaking", true);
-    hasShaked = true;
+    //hasShaked = true;
     Debug.Log("Shaking.");
         if (hasShaked)
         {

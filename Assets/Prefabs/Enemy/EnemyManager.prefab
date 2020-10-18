@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173345eb076b62d44b2966982f500270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 3
+  enemyHealth: 1
   nBEnemies: 0
   maxEnemies: 1000
   enemySpawn1: {fileID: 828361326692550046}
@@ -1179,7 +1179,7 @@ PrefabInstance:
     - target: {fileID: 2338724551595323824, guid: 82414c7c92fe50346b6836ad1a65a3a2,
         type: 3}
       propertyPath: speed
-      value: 0.58
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 2338724551595323824, guid: 82414c7c92fe50346b6836ad1a65a3a2,
         type: 3}
@@ -1190,6 +1190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyHealth
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338724551595323824, guid: 82414c7c92fe50346b6836ad1a65a3a2,
+        type: 3}
+      propertyPath: killThreshold
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2338724551595323825, guid: 82414c7c92fe50346b6836ad1a65a3a2,
         type: 3}
@@ -1216,6 +1221,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2338724551595323826, guid: 82414c7c92fe50346b6836ad1a65a3a2,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2338724551595323829, guid: 82414c7c92fe50346b6836ad1a65a3a2,
         type: 3}
       propertyPath: m_Height
@@ -1240,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 0.535792
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338724552621273004, guid: 82414c7c92fe50346b6836ad1a65a3a2,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyHead
       objectReference: {fileID: 0}
     - target: {fileID: 2338724552621273005, guid: 82414c7c92fe50346b6836ad1a65a3a2,
         type: 3}
@@ -1652,6 +1667,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5045019220218628647, guid: 6bd1d15363098aa4abe2ba556ea63cdb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5045019220218628825, guid: 6bd1d15363098aa4abe2ba556ea63cdb,
         type: 3}
       propertyPath: player
@@ -1681,6 +1701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012311294290961090, guid: 6bd1d15363098aa4abe2ba556ea63cdb,
+        type: 3}
+      propertyPath: m_Name
+      value: LunchLadyHatBrim
       objectReference: {fileID: 0}
     - target: {fileID: 7577606054164834145, guid: 6bd1d15363098aa4abe2ba556ea63cdb,
         type: 3}
@@ -1742,7 +1767,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5045019220218628826, guid: 6bd1d15363098aa4abe2ba556ea63cdb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6bd1d15363098aa4abe2ba556ea63cdb, type: 3}
 --- !u!4 &4457888954544755967 stripped
 Transform:

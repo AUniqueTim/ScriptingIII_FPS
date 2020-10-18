@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-   // public Transform player;
+  
     public GameObject player;
     [SerializeField] private float speed;
     [SerializeField] private LayerMask layerMask;
@@ -49,8 +49,7 @@ public class Enemy : MonoBehaviour
         Vector3 detectionRange = direction * detectionDistance;
 
         Ray enemyDetectionDistanceRay = new Ray(enemyRayOrigin.position, player.gameObject.transform.position * detectionDistance);
-        //Debug.DrawRay(enemyDetectionDistanceRay.origin, player.gameObject.transform.position * detectionDistance, Color.red);
-        //Debug.DrawRay(enemyDetectionDistanceRay.origin, detectionRange, Color.green);
+        
 
         if (Physics.Raycast(enemyDetectionDistanceRay, out RaycastHit enemyHit, detectionDistance))
         {
@@ -62,6 +61,8 @@ public class Enemy : MonoBehaviour
             Instantiate(enemyWeapons[Random.Range(0, 3)], enemyRayOrigin.transform.position, enemyRayOrigin.transform.rotation);
         }
         //End Enemy Raycast
+
+
         if (enemyHealth <= 0)
         {
             Destroy(gameObject);

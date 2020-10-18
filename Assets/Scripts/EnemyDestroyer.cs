@@ -7,7 +7,7 @@ public class EnemyDestroyer : MonoBehaviour
     public GameObject enemyPrefab;
     [SerializeField] private Transform enemyPrefabParent;
     [SerializeField] public Transform[] spawnLocations;
-    //[SerializeField] private Rigidbody enemyCloneRB;
+
     
 
     public void OnCollisionEnter(Collision collision)
@@ -24,15 +24,7 @@ public class EnemyDestroyer : MonoBehaviour
             Instantiate(enemyPrefab, enemyPrefabParent.transform.position, enemyPrefab.transform.rotation);
             EnemyManager.instance.nBEnemies++;
         }
-        //if (EnemyManager.instance.nBEnemies >= EnemyManager.instance.maxEnemies)
-        //{
-        //    gameObject.SetActive(false);
-        //}
-        //if (EnemyManager.instance.nBEnemies <= EnemyManager.instance.maxEnemies)
-        //{
-        //    Instantiate(enemyPrefab, enemyPrefabParent.transform.position, enemyPrefab.transform.rotation);
-        //    EnemyManager.instance.nBEnemies++;
-        //}
+       
         
     }
 }

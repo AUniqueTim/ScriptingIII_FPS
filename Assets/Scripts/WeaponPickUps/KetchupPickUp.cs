@@ -9,7 +9,7 @@ public class KetchupPickUp : MonoBehaviour
     public void OnMouseDown()
     {
        ketchupClicked = true;
-        PlayerManager.instance.ketchupAmmo = 10;
+       PlayerManager.instance.ketchupAmmo = Random.Range(4,7);
     }
 
 

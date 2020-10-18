@@ -248,7 +248,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 66
   m_CollisionDetection: 2
 --- !u!114 &2338724551595323824
 MonoBehaviour:
@@ -273,9 +273,15 @@ MonoBehaviour:
   enemyDetectionDistanceTransform: {fileID: 2338724550984887983}
   detectionDistance: -50
   enemyMeshRenderer: {fileID: 2338724551595323830}
+  camera: {fileID: 0}
   wayPoint1: {fileID: 0}
   wayPoint2: {fileID: 0}
   enemyHealth: 3
+  enemyWeapons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   killCount: 0
   killThreshold: 50
 --- !u!114 &2338724551595323825

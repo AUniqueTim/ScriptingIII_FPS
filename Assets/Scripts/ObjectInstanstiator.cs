@@ -44,9 +44,9 @@ public class ObjectInstanstiator : MonoBehaviour
         instantiatingAllowed = true;
         
     }
-    void Update()
+    public void Update()
     {
-        if (instantiatingAllowed) { if (playerCollision == true) { InstantiateObject(); } }
+        if (instantiatingAllowed) { if (playerCollision == true) { InstantiateObject() ; } }
         if (objectCount <= maxObjectCount) { instantiatingAllowed = true; }
         else /*if (objectCount > maxObjectCount)*/ { instantiatingAllowed = false; Destroy(instantiatedObject); }
     }
