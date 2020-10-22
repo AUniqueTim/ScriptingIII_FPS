@@ -52,7 +52,7 @@ public class FiringScript : MonoBehaviour
                 if (!PlayerManager.instance.ketchupHand.activeInHierarchy) { ketchupSpray.Stop(); ; Debug.Log("Ketchup PE Stopped."); }
             }
         }
-        else if (PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard)
+         if (PlayerManager.instance.currentWeapon = PlayerManager.instance.mustard)
         {
             if (isFiring)
             {
@@ -73,6 +73,7 @@ public class FiringScript : MonoBehaviour
                 }
                 if (!PlayerManager.instance.mustardHand.activeInHierarchy) { mustardSpray.Stop(); Debug.Log("Mustard PE Stopped."); }
             }
+            
         }
     }
 }

@@ -33,8 +33,8 @@ public class PlayerManager : MonoBehaviour
 
     public Quaternion currentRotation;
 
-    [SerializeField] public int killCount;
-    [SerializeField] public int killThreshold;
+     public int killCount;
+     public int killThreshold;
 
     public static PlayerManager instance;
     public static PlayerManager Instance

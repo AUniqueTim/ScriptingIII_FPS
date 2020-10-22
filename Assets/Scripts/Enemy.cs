@@ -53,12 +53,13 @@ public class Enemy : MonoBehaviour
 
         if (Physics.Raycast(enemyDetectionDistanceRay, out RaycastHit enemyHit, detectionDistance))
         {
-            if (enemyHit.collider.tag == "Player")
+            if (enemyHit.collider.gameObject.tag == "Player")
             {
                 Debug.Log("Enemy raycast hit player.");
             }
-            Debug.DrawRay(enemyDetectionDistanceRay.origin, camera.transform.position * detectionDistance, Color.red);
-            Instantiate(enemyWeapons[Random.Range(0, 3)], enemyRayOrigin.transform.position, enemyRayOrigin.transform.rotation);
+            Debug.DrawRay(camera.transform.position, camera.transform.position * detectionDistance, Color.red);
+            GameObject spawnedEnemy = Instantiate(enemyWeapons[Random.Range(0, 3)], enemyRayOrigin.transform.position + Vector3.forward, enemyRayOrigin.transform.rotation);
+            spawnedEnemy.gameObject.transform.Translate(Vector3.forward * detectionDistance);
         }
         //End Enemy Raycast
 
